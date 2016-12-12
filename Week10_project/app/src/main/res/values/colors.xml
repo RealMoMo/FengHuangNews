@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    
+    <color name="news_tablayout_select">#F54848</color>
+    <color name="news_tablayout_normal">#6C6C6C</color>
+    <color name="news_tablayout_backgroug">#F5F5F5</color>
+
+    <color name="main_tabhost_select">#F54343</color>
+    <color name="main_tabhost_normal">#999999</color>
+
+    <color name="fragment_account_head">#F54343</color>
+    <color name="fragment_account_username">#FFF</color>
+    <color name="fragment_account_sp">#F1F1F1</color>
+    <color name="fragment_account_item_text">#1A1A1A</color>
+
+
+    <color name="activity_live_titleBackground">#F5F5F5</color>
+    <color name="activity_live_titleColor">#000</color>
+    <color name="activity_live_lvColor">#fff</color>
+
+    <color name="news_lv_titleColor">#000</color>
+    <color name="news_lv_sourceColor">#9A9A9A</color>
+</resources>

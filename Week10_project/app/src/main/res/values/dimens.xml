@@ -1,0 +1,44 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="fragment_news_title_padding">5dp</dimen>
+    <dimen name="fragment_news_title_search_padding">5dp</dimen>
+
+    <dimen name="fragment_account_headlayout_height">180dp</dimen>
+    <dimen name="fragment_account_headicon_weight_height">80dp</dimen>
+    <dimen name="fragment_account_head_margin">10dp</dimen>
+    <dimen name="fragment_account_secondhead_textsize">13sp</dimen>
+    <dimen name="fragment_account_secondhead_padding">5dp</dimen>
+    <dimen name="fragment_account_secondhead_margin">10dp</dimen>
+    <dimen name="fragment_account_view_height">5dp</dimen>
+    <dimen name="fragment_account_itemtext_margin">5dp</dimen>
+    <dimen name="fragment_account_item_textsize">15sp</dimen>
+
+
+    <dimen name="activity_live_textsize">20sp</dimen>
+    <dimen name="activity_live_titlePadding">10dp</dimen>
+    <dimen name="activity_live_lv_height">160dp</dimen>
+    <dimen name="activity_live_lv_padding">10dp</dimen>
+    <dimen name="activity_live_lv_margin">5dp</dimen>
+    <dimen name="activity_live_lv_titlesiez">18dp</dimen>
+    <dimen name="activity_live_lv_timesize">12dp</dimen>
+    <dimen name="activity_live_lv_timemargin">20dp</dimen>
+    <dimen name="activity_live_lv2_titlesize">18sp</dimen>
+    <dimen name="activity_live_lv2_scoresize">30sp</dimen>
+    <dimen name="activity_live_lv2_teamsize">13sp</dimen>
+
+    <dimen name="news_lv_normal_height">120dp</dimen>
+    <dimen name="news_lv_titlesize">16dp</dimen>
+    <dimen name="news_lv_sourcesize">12dp</dimen>
+    <dimen name="news_lv_margin">10dp</dimen>
+    <dimen name="news_lv_padding">10dp</dimen>
+    <dimen name="news_lv2_imglayoutpadding">5dp</dimen>
+    <dimen name="news_lv2_imgpadding">2dp</dimen>
+
+    <dimen name="news_banner_height">240dp</dimen>
+
+
+</resources>

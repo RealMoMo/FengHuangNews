@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "D:\\AndroidStudioProjects\\Week10_project\\VitamioLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\mediacontroller_button.xml",
+        "source": "D:\\AndroidStudioProjects\\Week10_project\\VitamioLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\mediacontroller_button.xml"
+    },
+    {
+        "merged": "C:\\androidstudioSpace\\Week10_project\\VitamioLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\mediacontroller_button.xml",
+        "source": "C:\\androidstudioSpace\\Week10_project\\VitamioLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\mediacontroller_button.xml"
+    },
+    {
+        "merged": "C:\\androidstudioSpace\\Week10_project\\VitamioLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\scrubber_progress_horizontal_holo_dark.xml",
+        "source": "C:\\androidstudioSpace\\Week10_project\\VitamioLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\scrubber_progress_horizontal_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\androidstudioSpace\\Week09\\VitamioLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\scrubber_progress_horizontal_holo_dark.xml",
+        "source": "C:\\androidstudioSpace\\Week09\\VitamioLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\scrubber_progress_horizontal_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\androidstudioSpace\\Week09\\VitamioLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\mediacontroller_button.xml",
+        "source": "C:\\androidstudioSpace\\Week09\\VitamioLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\mediacontroller_button.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Week10_project\\VitamioLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\scrubber_control_selector_holo.xml",
+        "source": "D:\\AndroidStudioProjects\\Week10_project\\VitamioLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\scrubber_control_selector_holo.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Week10_project\\VitamioLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\scrubber_progress_horizontal_holo_dark.xml",
+        "source": "D:\\AndroidStudioProjects\\Week10_project\\VitamioLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\scrubber_progress_horizontal_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\androidstudioSpace\\Week10_project\\VitamioLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\scrubber_control_selector_holo.xml",
+        "source": "C:\\androidstudioSpace\\Week10_project\\VitamioLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\scrubber_control_selector_holo.xml"
+    },
+    {
+        "merged": "C:\\androidstudioSpace\\Week09\\VitamioLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\scrubber_control_selector_holo.xml",
+        "source": "C:\\androidstudioSpace\\Week09\\VitamioLibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\scrubber_control_selector_holo.xml"
+    }
+]
