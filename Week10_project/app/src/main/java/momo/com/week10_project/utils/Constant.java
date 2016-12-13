@@ -11,6 +11,6 @@ public class Constant {
     //跳转livedetail_activity的intent的key
     public static final String DETAIL_URL="detail_url";
 
-    //
+    //点击新闻界面的子item跳转详细内容的
     public static final String MODULE_CONTENT="moduleContent";
 }

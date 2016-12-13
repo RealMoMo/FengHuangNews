@@ -12,6 +12,8 @@ import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
 import com.youth.banner.loader.ImageLoader;
 
+import java.util.List;
+
 import momo.com.week10_project.R;
 
 /**
@@ -23,21 +25,24 @@ import momo.com.week10_project.R;
  * <p/>
  *
  */
-public class BannerView extends FrameLayout{
+public abstract class BannerView<T> extends FrameLayout{
 
-    Banner banner;
+    private Banner banner;
+    private List<T> list;
 
-    public BannerView(Context context) {
+    public BannerView(Context context,List<T> list) {
         super(context);
-        init();
+        init(list);
     }
 
-    public BannerView(Context context, AttributeSet attrs) {
+    public BannerView(Context context, AttributeSet attrs,List<T> list) {
         super(context, attrs);
-        init();
+        init(list);
     }
 
-    private void init(){
+    private void init(List<T> list){
+        this.list = list;
+
         //加载布局  参数3：true xml定义banner与本自定义view绑定在一起
         LayoutInflater.from(getContext()).inflate(R.layout.news_banner_layout,this,true);
         //初始化控件
@@ -50,16 +55,17 @@ public class BannerView extends FrameLayout{
         //设置图片集合
 //        banner.setImages(images);
         //设置banner动画效果
-        banner.setBannerAnimation(Transformer.FlipHorizontal);
+        banner.setBannerAnimation(Transformer.Default);
         //设置标题集合（当banner样式有显示title时）
 //        banner.setBannerTitles(Arrays.asList(titles));
         //设置自动轮播，默认为true
         banner.isAutoPlay(true);
         //设置轮播时间
-        banner.setDelayTime(2000);
+        banner.setDelayTime(3000);
         //设置指示器位置（当banner模式中有指示器时）
         banner.setIndicatorGravity(BannerConfig.CENTER);
 
+        setBannerContent();
 
     }
 
@@ -77,8 +83,12 @@ public class BannerView extends FrameLayout{
 
 
 
-    public void setCityId(String cityId){
 
+
+    public void setBannerContent(){
+
+
+    bindData(banner,list);
 
 //        //设置banner的图片集合及标题集合
 //        banner.setImages(imgUrls);
@@ -87,4 +97,7 @@ public class BannerView extends FrameLayout{
 //        banner.start();
 
     }
+
+
+    public abstract void bindData(Banner banner,List<T> list);
 }

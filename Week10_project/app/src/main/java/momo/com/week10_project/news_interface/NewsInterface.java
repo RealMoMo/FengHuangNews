@@ -2,6 +2,7 @@ package momo.com.week10_project.news_interface;
 
 import java.util.List;
 
+import momo.com.week10_project.entity.NewsSportEntity;
 import momo.com.week10_project.entity.NewsTopEntity;
 import momo.com.week10_project.utils.ManagerApi;
 import retrofit2.Call;
@@ -15,4 +16,7 @@ public interface NewsInterface {
 
     @GET(ManagerApi.NEWS_TOP)
     Call<List<NewsTopEntity>> getTopEntity(@Query("action")String action);
+
+    @GET(ManagerApi.NEWS_SPORT)
+    Call<List<NewsSportEntity>> getSportEntity(@Query("page")int page);
 }

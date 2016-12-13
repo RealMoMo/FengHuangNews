@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/news_lv2_title"
+        android:id="@+id/news_lv6_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/news_lv_padding"
@@ -22,7 +22,7 @@
         android:padding="@dimen/news_lv2_imglayoutpadding">
 
         <ImageView
-            android:id="@+id/news_lv2_iv1"
+            android:id="@+id/news_lv6_iv1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -30,7 +30,7 @@
             android:paddingLeft="@dimen/news_lv2_imgpadding" />
 
         <ImageView
-            android:id="@+id/news_lv2_iv2"
+            android:id="@+id/news_lv6_iv2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -38,7 +38,7 @@
             android:paddingLeft="@dimen/news_lv2_imgpadding" />
 
         <ImageView
-            android:id="@+id/news_lv2_iv3"
+            android:id="@+id/news_lv6_iv3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -48,12 +48,38 @@
 
     </LinearLayout>
 
-    <TextView
-        android:paddingLeft="@dimen/news_lv_padding"
-        android:id="@+id/news_lv2_source"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/news_lv_sourceColor"
-        android:textSize="@dimen/news_lv_sourcesize" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:gravity="center"
+            android:paddingLeft="@dimen/news_lv_padding"
+            android:id="@+id/news_lv6_source"
+            android:textSize="@dimen/news_lv_sourcesize"
+            android:textColor="@color/news_lv_sourceColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:gravity="center"
+            android:paddingRight="@dimen/news_lv_padding"
+            android:textSize="@dimen/news_lv_sourcesize"
+            android:textColor="@color/news_lv_sourceColor"
+            android:drawableRight="@drawable/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/news_lv6_comments"/>
+
+
+
+    </LinearLayout>
+
 
 </LinearLayout>

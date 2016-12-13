@@ -6,11 +6,10 @@
 
     <ImageView
         android:paddingLeft="@dimen/news_lv_padding"
-
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:id="@+id/news_lv3_iv"/>
+        android:id="@+id/news_lv5_iv"/>
 
     <RelativeLayout
         android:layout_width="0dp"
@@ -22,7 +21,7 @@
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/news_lv3_title"
+            android:id="@+id/news_lv5_title"
             android:textSize="@dimen/news_lv_titlesize"
             android:textColor="@color/news_lv_titleColor"/>
 
@@ -32,6 +31,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+        <TextView
+            android:gravity="center"
+            android:padding="@dimen/news_lv_padding"
+            android:id="@+id/news_lv5_source"
+            android:textSize="@dimen/news_lv_sourcesize"
+            android:textColor="@color/news_lv_sourceColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
@@ -44,14 +52,9 @@
             android:drawableRight="@drawable/comment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/news_lv3_comments"/>
+            android:id="@+id/news_lv5_comments"/>
 
-        <ImageView
-            android:layout_marginRight="@dimen/news_lv_margin"
-            android:id="@+id/news_lv3_topiv"
-            android:src="@drawable/top"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+
 
     </LinearLayout>
 

@@ -24,11 +24,13 @@ import in.srain.cube.views.ptr.PtrDefaultHandler;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import momo.com.week10_project.R;
 import momo.com.week10_project.adapter.AbstractBaseAdapter;
-import momo.com.week10_project.entity.NewsTopEntity;
+import momo.com.week10_project.entity.NewsSportEntity;
 import momo.com.week10_project.news_interface.NewsInterface;
 import momo.com.week10_project.utils.ManagerApi;
 import momo.com.week10_project.utils.TimeUtils;
 import momo.com.week10_project.widget.BannerView;
+import momo.com.week10_project.widget.SportNewsChannelIconView;
+import momo.com.week10_project.widget.SportNewsChannelNameView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -38,12 +40,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * Created by Administrator on 2016/12/11 0011.
  */
-public class NewsItemFragment extends Fragment implements AdapterView.OnItemClickListener, AbsListView.OnScrollListener {
+public class NewsSportItemFragment extends Fragment implements AdapterView.OnItemClickListener, AbsListView.OnScrollListener {
 
     //当前时间的月日
     private String currentData;
-    //标识：初次进入default，上拉加载更多up，下拉刷新down
-    private String action = "default";
+    //标识：已加载的页数
+    private int page = 1;
     //标识：是否初次进入，针对刷新头
     private boolean flag = true;
     //标识：是否加载更多
@@ -51,28 +53,30 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
     private PtrClassicFrameLayout refresh;
     private ListView lv;
     //新闻轮播View
-    private BannerView<NewsTopEntity.ItemEntity> bannerView;
-    private AbstractBaseAdapter<NewsTopEntity.ItemEntity> adapter;
+    private BannerView<NewsSportEntity.ItemEntity> bannerView;
+    //体育项目的iconView
+    private SportNewsChannelIconView iconView;
+    //体育项目的nameView
+    private SportNewsChannelNameView nameView;
+    //adapter
+    private AbstractBaseAdapter<NewsSportEntity.ItemEntity> adapter;
 
     //所有的itemlist
-    private List<NewsTopEntity.ItemEntity> totalList;
-    //放专题的itemlist
-    private List<NewsTopEntity.ItemEntity> topList;
-    //只放普通新闻的itemlist
-    private List<NewsTopEntity.ItemEntity> itemList;
+    private List<NewsSportEntity.ItemEntity> totalList;
+    //体育种类的itemlist
+    private List<NewsSportEntity.ItemEntity> channelList;
     //放新闻轮播的itemlist
-    private List<NewsTopEntity.ItemEntity> bannerList;
+    private List<NewsSportEntity.ItemEntity> bannerList;
 
 
     @Override
     public void onCreate(@Nullable Bundle bundle) {
         super.onCreate(bundle);
 
-
         initData();
 
-
-
+        iconView = new SportNewsChannelIconView(getActivity());
+        nameView = new SportNewsChannelNameView(getActivity());
 
     }
 
@@ -80,55 +84,55 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
     //初始化数据源及adapter
     private void initData() {
         totalList = new ArrayList<>();
-        itemList = new ArrayList<>();
-        topList = new ArrayList<>();
+        channelList = new ArrayList<>();
         bannerList = new ArrayList<>();
 
-        adapter = new AbstractBaseAdapter<NewsTopEntity.ItemEntity>(getActivity(), totalList,
-                R.layout.news_content_layout1, R.layout.news_content_layout2,
-                R.layout.news_content_layout3, R.layout.news_content_layout4) {
+        adapter = new AbstractBaseAdapter<NewsSportEntity.ItemEntity>(getActivity(), totalList,
+                R.layout.news_content_layout5, R.layout.news_content_layout6,
+                R.layout.news_content_layout3,R.layout.news_content_layout5) {
             @Override
             public void bindData(int position, ViewHolder holder) {
-                NewsTopEntity.ItemEntity itemEntity = totalList.get(position);
+                NewsSportEntity.ItemEntity itemEntity = totalList.get(position);
                 int type = totalList.get(position).getViewType();
                 switch (type) {
-                    //单图布局或不置顶的专题
+                    //带来源单图布局
                     case 0: {
                         //图片
-                        ImageView iv = (ImageView) holder.findViewById(R.id.news_lv1_iv);
+                        ImageView iv = (ImageView) holder.findViewById(R.id.news_lv5_iv);
                         Glide.with(getActivity()).load(itemEntity.getThumbnail()).into(iv);
                         //标题
-                        TextView tv_title = (TextView) holder.findViewById(R.id.news_lv1_title);
+                        TextView tv_title = (TextView) holder.findViewById(R.id.news_lv5_title);
                         tv_title.setText(itemEntity.getTitle());
                         //来源与时间
-                        TextView tv_source = (TextView) holder.findViewById(R.id.news_lv1_source);
-                        if (itemEntity.getSource()!=null) {
-                            tv_source.setText(itemEntity.getSource() + "  " + getUpdateTime(itemEntity.getUpdateTime()));
-                        }else{
-                            //不置顶的专题
-                            tv_source.setText("小专题");
-                        }
+                        TextView tv_source = (TextView) holder.findViewById(R.id.news_lv5_source);
+                        tv_source.setText(itemEntity.getSource() + "  " + getUpdateTime(itemEntity.getUpdateTime()));
+                        //评论
+                        TextView tv_comment = (TextView) holder.findViewById(R.id.news_lv5_comments);
+                        tv_comment.setText( itemEntity.getCommentsall());
                     }
                     break;
                     //多图布局
                     case 1: {
                         //标题
-                        TextView tv_title = (TextView) holder.findViewById(R.id.news_lv2_title);
+                        TextView tv_title = (TextView) holder.findViewById(R.id.news_lv6_title);
                         tv_title.setText(itemEntity.getTitle());
                         //图片
                         List<String> imagesUrl = itemEntity.getStyle().getImages();
-                        ImageView iv1 = (ImageView) holder.findViewById(R.id.news_lv2_iv1);
-                        ImageView iv2 = (ImageView) holder.findViewById(R.id.news_lv2_iv2);
-                        ImageView iv3 = (ImageView) holder.findViewById(R.id.news_lv2_iv3);
+                        ImageView iv1 = (ImageView) holder.findViewById(R.id.news_lv6_iv1);
+                        ImageView iv2 = (ImageView) holder.findViewById(R.id.news_lv6_iv2);
+                        ImageView iv3 = (ImageView) holder.findViewById(R.id.news_lv6_iv3);
                         Glide.with(getActivity()).load(imagesUrl.get(0)).into(iv1);
                         Glide.with(getActivity()).load(imagesUrl.get(1)).into(iv2);
                         Glide.with(getActivity()).load(imagesUrl.get(2)).into(iv3);
-                        //来源与时间
-                        TextView tv_source = (TextView) holder.findViewById(R.id.news_lv2_source);
-                        tv_source.setText(itemEntity.getSource() + "  " + getUpdateTime(itemEntity.getUpdateTime()));
+                        //时间
+                        TextView tv_source = (TextView) holder.findViewById(R.id.news_lv6_source);
+                        tv_source.setText( getUpdateTime(itemEntity.getUpdateTime()));
+                        //评论
+                        TextView tv_comment = (TextView) holder.findViewById(R.id.news_lv6_comments);
+                        tv_comment.setText( itemEntity.getCommentsall());
                     }
                     break;
-                    //专题布局(置顶)
+                    //专题布局
                     case 2: {
                         //图片
                         ImageView iv = (ImageView) holder.findViewById(R.id.news_lv3_iv);
@@ -141,23 +145,20 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
                         tv_comments.setText(itemEntity.getCommentsall());
                     }
                     break;
-                    //视频布局
+                    //不带来源单图布局
                     case 3: {
-                        //标题
-                        TextView tv_title = (TextView) holder.findViewById(R.id.news_lv4_title);
-                        tv_title.setText(itemEntity.getTitle());
                         //图片
-                        ImageView iv = (ImageView) holder.findViewById(R.id.news_lv4_iv_thumb);
+                        ImageView iv = (ImageView) holder.findViewById(R.id.news_lv5_iv);
                         Glide.with(getActivity()).load(itemEntity.getThumbnail()).into(iv);
-                        //视频时长
-                        TextView tv_videoTime = (TextView) holder.findViewById(R.id.news_lv4_tv_videotime);
-                        tv_videoTime.setText(TimeUtils.getVideoTime(itemEntity.getPhvideo().getLength()));
-                        //来源
-                        TextView tv_source = (TextView) holder.findViewById(R.id.news_lv4_source);
-                        tv_source.setText(itemEntity.getPhvideo().getChannelName());
-                        //评论数
-                        TextView tv_comments = (TextView) holder.findViewById(R.id.news_lv4_comments);
-                        tv_comments.setText(itemEntity.getCommentsall());
+                        //标题
+                        TextView tv_title = (TextView) holder.findViewById(R.id.news_lv5_title);
+                        tv_title.setText(itemEntity.getTitle());
+                        //时间
+                        TextView tv_source = (TextView) holder.findViewById(R.id.news_lv5_source);
+                        tv_source.setText(getUpdateTime(itemEntity.getUpdateTime()));
+                        //评论
+                        TextView tv_comment = (TextView) holder.findViewById(R.id.news_lv5_comments);
+                        tv_comment.setText( itemEntity.getCommentsall());
                     }
                 }
             }
@@ -190,17 +191,14 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
     private void setupViews(View view) {
         lv = (ListView) view.findViewById(R.id.newstop_lv);
         lv.setAdapter(adapter);
-        //还是首次加载数据，viewpager切换回来，广告保留(若用回来的bannerView切换不流畅，所以在ondestoryView将bannerView=null)
-        if(bannerList.size()>0&& action.equals("default")){
-
-            bannerView = new BannerView<NewsTopEntity.ItemEntity>(getActivity(),bannerList) {
+        if(bannerList.size()>0){
+            bannerView = new BannerView<NewsSportEntity.ItemEntity>(getActivity(),bannerList) {
                 @Override
-                public void bindData(Banner banner, List<NewsTopEntity.ItemEntity> list) {
-
+                public void bindData(Banner banner, List<NewsSportEntity.ItemEntity> list) {
                     List<String> imgUrls = new ArrayList<String>();
                     List<String> titles = new ArrayList<String>();
 
-                    for (NewsTopEntity.ItemEntity i : list) {
+                    for (NewsSportEntity.ItemEntity i : list){
                         imgUrls.add(i.getThumbnail());
                         titles.add(i.getTitle());
                     }
@@ -213,8 +211,17 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
                 }
             };
             lv.addHeaderView(bannerView,null,false);
-
+            lv.addHeaderView(iconView,null,false);
+            lv.addHeaderView(nameView,null,false);
         }
+        //这样直接加有bug,listview最上面留了空白  (不懂),所以把iconView,nameView放上面加
+//        if(iconView!=null){
+//            lv.addHeaderView(iconView,null,false);
+//        }
+//        if(nameView!=null){
+//            lv.addHeaderView(nameView,null,false);
+//        }
+
         //listview item点击事件
         lv.setOnItemClickListener(this);
         //listview 滚动监听
@@ -223,8 +230,7 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
         refresh = (PtrClassicFrameLayout) view.findViewById(R.id.news_refresh);
         refresh.setLastUpdateTimeRelateObject(this);
         //初次进来，自动刷新
-        if(flag ==true) {
-
+        if(flag == true) {
             refresh.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
                 @Override
                 public void onGlobalLayout() {
@@ -242,12 +248,10 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
         refresh.setPtrHandler(new PtrDefaultHandler() {
             @Override
             public void onRefreshBegin(PtrFrameLayout frame) {
-                //判断是首次还是人为的下拉刷新
-                action = flag == true ? "default" : "down";
                 flag = false;
+                page =1;
                 //获取数据
                 getNewsData();
-
             }
 
             @Override
@@ -260,68 +264,63 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
 
 
     private void getNewsData() {
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(ManagerApi.BASEURL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         NewsInterface newsInterface = retrofit.create(NewsInterface.class);
 
-        Call<List<NewsTopEntity>> call = newsInterface.getTopEntity(action);
-        call.enqueue(new Callback<List<NewsTopEntity>>() {
+        Call<List<NewsSportEntity>> call = newsInterface.getSportEntity(page);
+        call.enqueue(new Callback<List<NewsSportEntity>>() {
             @Override
-            public void onResponse(Call<List<NewsTopEntity>> call, Response<List<NewsTopEntity>> response) {
-                //非首次加载数据，移除广告
-                if(bannerView!=null&& !action.equals("default")){
-                    lv.removeHeaderView(bannerView);
-                    bannerView =null;
-                }
-                List<NewsTopEntity> entity = response.body();
+            public void onResponse(Call<List<NewsSportEntity>> call, Response<List<NewsSportEntity>> response) {
+
+                List<NewsSportEntity> entity = response.body();
                 for (int i = 0; i < entity.size(); i++) {
                     switch (entity.get(i).getType()) {
                         //普通新闻
                         case "list": {
-                            //人为下拉刷新
-                            if (action.equals("down")) {
-                                itemList.clear();
-                                //去掉专题
-                                if (totalList.get(0).getViewType() == 2) {
-                                    totalList.remove(0);
-                                }
+                            //头部刷新，清空数据
+                            if(page==1&&totalList.size()>0){
+                                totalList.clear();
                             }
                             for (int j = 0; j < entity.get(i).getItem().size(); j++) {
-                                //单图
-                                if (entity.get(i).getItem().get(j).getStyle() == null && entity.get(i).getItem().get(j).getPhvideo() == null) {
+                                //带来源的单图/多图
+                                if (entity.get(i).getItem().get(j).getSource() != null) {
                                     entity.get(i).getItem().get(j).setViewType(0);
                                 }
                                 //多图
                                 else if (entity.get(i).getItem().get(j).getStyle() != null) {
                                     entity.get(i).getItem().get(j).setViewType(1);
                                 }
-                                //视频
+                                //专题
+                                else if(entity.get(i).getItem().get(j).getStyleType()!=null &&entity.get(i).getItem().get(j).getStyleType().equals("tytopic")){
+                                    entity.get(i).getItem().get(j).setViewType(2);
+                                }
+                                //单图
                                 else {
                                     entity.get(i).getItem().get(j).setViewType(3);
                                 }
+
+
                             }
-                            //下拉刷新，最新数据放到
-                            if (action.equals("down")) {
-                                itemList.addAll(entity.get(i).getItem());
-                                itemList.addAll(totalList);
-                            } else {
-                                itemList.addAll(entity.get(i).getItem());
-                            }
+                            totalList.addAll(entity.get(i).getItem());
                         }
                         break;
                         //轮播新闻
                         case "focus": {
+                            if(bannerList.size()>0){
+                                continue;
+                            }
                             bannerList.addAll(entity.get(i).getItem());
-                            bannerView = new BannerView<NewsTopEntity.ItemEntity>(getActivity(),bannerList) {
+                            bannerView = new BannerView<NewsSportEntity.ItemEntity>(getActivity(),bannerList) {
                                 @Override
-                                public void bindData(Banner banner, List<NewsTopEntity.ItemEntity> list) {
-
+                                public void bindData(Banner banner, List<NewsSportEntity.ItemEntity> list) {
                                     List<String> imgUrls = new ArrayList<String>();
                                     List<String> titles = new ArrayList<String>();
 
-                                    for (NewsTopEntity.ItemEntity i : list){
+                                    for (NewsSportEntity.ItemEntity i : list){
                                         imgUrls.add(i.getThumbnail());
                                         titles.add(i.getTitle());
                                     }
@@ -339,12 +338,18 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
 
                         }
                         break;
-                        //专题新闻
-                        case "top": {
-                            for (int j = 0; j < entity.get(i).getItem().size(); j++) {
-                                entity.get(i).getItem().get(j).setViewType(2);
+                        //体育项目
+                        case "tytopic": {
+                            if(channelList.size()>0){
+                                continue;
                             }
-                            topList.addAll(entity.get(i).getItem());
+
+                            channelList.addAll(entity.get(i).getItem());
+                            iconView.setData(channelList);
+                            nameView.setData(channelList);
+
+                            lv.addHeaderView(iconView,null,false);
+                            lv.addHeaderView(nameView,null,false);
 
                         }
                         break;
@@ -356,23 +361,20 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
                 currentData = TimeUtils.getCurrentTime();
 
 
-                totalList.clear();
-                if (action.equals("default")) {
-                    totalList.addAll(topList);
-                }
-                totalList.addAll(itemList);
                 adapter.notifyDataSetChanged();
 
                 refresh.refreshComplete();
 
 
-            }
+        }
 
             @Override
-            public void onFailure(Call<List<NewsTopEntity>> call, Throwable t) {
+            public void onFailure(Call<List<NewsSportEntity>> call, Throwable t) {
                 refresh.refreshComplete();
+
             }
         });
+
     }
 
     //listview item的点击事件
@@ -401,7 +403,7 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
     @Override
     public void onScrollStateChanged(AbsListView view, int scrollState) {
         if (isAddMore && scrollState == SCROLL_STATE_IDLE) {
-            action = "up";
+            page++;
             getNewsData();
         }
     }
@@ -422,5 +424,7 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
             lv.removeHeaderView(bannerView);
             bannerView = null;
         }
+        lv.removeHeaderView(iconView);
+        lv.removeHeaderView(nameView);
     }
 }

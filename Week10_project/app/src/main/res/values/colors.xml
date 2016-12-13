@@ -23,4 +23,5 @@
 
     <color name="news_lv_titleColor">#000</color>
     <color name="news_lv_sourceColor">#9A9A9A</color>
+    <color name="news_lv_vidiotimeColor">#fff</color>
 </resources>

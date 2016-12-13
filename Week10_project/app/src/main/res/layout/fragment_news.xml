@@ -49,7 +49,7 @@
         android:layout_weight="1"
         android:layout_height="wrap_content"
         app:tabMode="scrollable"
-        app:tabMaxWidth="50dp"
+        app:tabMaxWidth="60dp"
         app:tabSelectedTextColor="@color/news_tablayout_select"
         app:tabTextColor="@color/news_tablayout_normal" />
 

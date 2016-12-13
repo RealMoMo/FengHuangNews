@@ -26,11 +26,11 @@
             android:name=".ui.LiveActivity"
             android:theme="@style/LiveActivityTheme" />
         <activity android:name=".ui.SearchActivity" />
-        <activity android:name=".ui.LiveDetailActivity" >
-
-        </activity>
-        <activity android:name=".ui.Live_lvContent_Activity"
-            android:theme="@style/Live_lvContentActivityTheme"></activity>
+        <activity android:name=".ui.LiveDetailActivity"></activity>
+        <activity
+            android:name=".ui.Live_lvContent_Activity"
+            android:theme="@style/Live_lvContentActivityTheme" />
+        <activity android:name=".ui.NewsContent_Activity"></activity>
     </application>
 
 </manifest>

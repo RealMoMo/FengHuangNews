@@ -5,7 +5,7 @@
     android:weightSum="3">
 
     <ImageView
-        android:padding="@dimen/news_lv_padding"
+        android:paddingLeft="@dimen/news_lv_padding"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -25,6 +25,8 @@
             android:textSize="@dimen/news_lv_titlesize"
             android:textColor="@color/news_lv_titleColor"/>
 
+
+
         <TextView
             android:padding="@dimen/news_lv_padding"
             android:layout_alignParentRight="true"
@@ -34,6 +36,9 @@
             android:id="@+id/news_lv1_source"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+
+
 
 
 

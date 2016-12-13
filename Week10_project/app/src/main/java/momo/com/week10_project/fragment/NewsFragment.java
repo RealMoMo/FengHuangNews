@@ -18,7 +18,6 @@ import momo.com.week10_project.R;
 import momo.com.week10_project.adapter.NewsViewPagerAdapter;
 import momo.com.week10_project.ui.LiveActivity;
 import momo.com.week10_project.ui.SearchActivity;
-import momo.com.week10_project.utils.Constant;
 
 /**
  * Created by Administrator on 2016/12/10 0010.
@@ -27,7 +26,7 @@ import momo.com.week10_project.utils.Constant;
 public class NewsFragment extends Fragment implements View.OnClickListener {
 
     private String[] titles={
-            "头条","热点","娱乐","体育","财经","凤凰","财经","科技","社会","美女"
+            "头条","体育","热点","娱乐","财经","凤凰","科技","社会"
     };
 
     private TabLayout tabLayout;
@@ -45,17 +44,19 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
         super.onCreate(savedInstanceState);
 
         initNewsItemFragment();
-        adapter = new NewsViewPagerAdapter(getContext(),getActivity().getSupportFragmentManager(),fragmentList,titles);
+        adapter = new NewsViewPagerAdapter(getContext(),getChildFragmentManager(),fragmentList,titles);
 
     }
 
     private void initNewsItemFragment() {
         fragmentList = new ArrayList<>();
         for (int i = 0; i < titles.length; i++) {
-            Fragment fragment = new NewsItemFragment();
-            Bundle bundle = new Bundle();
-            bundle.putString(Constant.MODULE_CONTENT, titles[i]);
-            fragment.setArguments(bundle);
+            Fragment fragment;
+            if(i%2==0) {
+                fragment = new NewsItemFragment();
+            }else{
+                fragment = new NewsSportItemFragment();
+            }
             fragmentList.add(fragment);
         }
     }
