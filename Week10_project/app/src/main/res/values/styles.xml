@@ -29,6 +29,15 @@
 
     <!--MainActivity theme-->
     <style name="Live_lvContentActivityTheme" parent="WelcomeTheme">
+    </style>
+
+    <!--NewsContentActivity theme-->
+    <style name="News_ContentActivityTheme" parent="WelcomeTheme">
+
+    </style>
+
+    <!--searchActivity theme-->
+    <style name="SearchActivityTheme" parent="WelcomeTheme">
 
     </style>
 

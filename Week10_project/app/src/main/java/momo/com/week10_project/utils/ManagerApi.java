@@ -18,5 +18,22 @@ public class ManagerApi {
     //直播界面电视台的api
     public static final String LIVE_CHANNEL="livechannel_logoinfo?gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi";
 
+    //精选视频api(page=1 ++)
+    public static final String VIDEO_JX="ifengvideoList?gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi";
+
+    //除精选视频的api(page=1 ++  typeid=clientvideo_1 根据精选接口进行返回)
+    public static final String VIDEO_OTHER="ifengvideoList?listtype=list&gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi";
+
+
+    //搜索的主机路劲
+    public static final String SEARCH_BASEURL="http://api.3g.ifeng.com/";
+
+    //进入搜索获取热门搜索内容的api
+    public static final String SEARCH_HOTCONTENT="client_search_hotword?gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi";
+
+    //搜索的api（page=1 += k= 搜索的内容)  --不带凤凰号
+    public static final String SEARCH_CONTENT="client_search_list?gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi";
+
+
 
 }

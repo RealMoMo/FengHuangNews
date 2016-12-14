@@ -25,9 +25,12 @@ import momo.com.week10_project.ui.SearchActivity;
 //fragment切换时，重走onDestroyView oncreateView onViewCreate
 public class NewsFragment extends Fragment implements View.OnClickListener {
 
-    private String[] titles={
-            "头条","体育","热点","娱乐","财经","凤凰","科技","社会"
-    };
+//    private String[] titles={
+//            "头条","体育","热点","娱乐","财经","凤凰","科技","社会"
+//    };
+
+    //后续做全面，存储新闻模块的种类，用数据库存储种类名，与api地址。
+    private List<String> titlesList ;
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -43,14 +46,26 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        titlesList = new ArrayList();
+        titlesList.add("头条");
+        titlesList.add("体育");
+        titlesList.add("热点");
+        titlesList.add("娱乐");
+        titlesList.add("财经");
+        titlesList.add("凤凰");
+        titlesList.add("科技");
+        titlesList.add("社会");
+
         initNewsItemFragment();
-        adapter = new NewsViewPagerAdapter(getContext(),getChildFragmentManager(),fragmentList,titles);
+        adapter = new NewsViewPagerAdapter(getContext(),getChildFragmentManager(),fragmentList,titlesList);
 
     }
 
+
+    //暂时写了头条和体育模块的新闻
     private void initNewsItemFragment() {
         fragmentList = new ArrayList<>();
-        for (int i = 0; i < titles.length; i++) {
+        for (int i = 0; i < titlesList.size(); i++) {
             Fragment fragment;
             if(i%2==0) {
                 fragment = new NewsItemFragment();

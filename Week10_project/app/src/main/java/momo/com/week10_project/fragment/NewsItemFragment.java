@@ -1,5 +1,6 @@
 package momo.com.week10_project.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -26,6 +27,8 @@ import momo.com.week10_project.R;
 import momo.com.week10_project.adapter.AbstractBaseAdapter;
 import momo.com.week10_project.entity.NewsTopEntity;
 import momo.com.week10_project.news_interface.NewsInterface;
+import momo.com.week10_project.ui.NewsTopContent_Activity;
+import momo.com.week10_project.utils.Constant;
 import momo.com.week10_project.utils.ManagerApi;
 import momo.com.week10_project.utils.TimeUtils;
 import momo.com.week10_project.widget.BannerView;
@@ -106,7 +109,8 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
                             tv_source.setText(itemEntity.getSource() + "  " + getUpdateTime(itemEntity.getUpdateTime()));
                         }else{
                             //不置顶的专题
-                            tv_source.setText("小专题");
+                            itemEntity.setTitle(Constant.Top_TITLE);
+                            tv_source.setText(itemEntity.getTitle());
                         }
                     }
                     break;
@@ -284,9 +288,12 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
                             if (action.equals("down")) {
                                 itemList.clear();
                                 //去掉专题
-                                if (totalList.get(0).getViewType() == 2) {
-                                    totalList.remove(0);
-                                }
+                                    if(totalList.size()>0) {
+                                        if (totalList.get(0).getViewType() == 2) {
+                                            totalList.remove(0);
+                                        }
+                                    }
+
                             }
                             for (int j = 0; j < entity.get(i).getItem().size(); j++) {
                                 //单图
@@ -377,8 +384,19 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
 
     //listview item的点击事件
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//        String itemId = totalList.get(position-lv.getHeaderViewsCount()).getId();
+//        String commentsUrl = totalList.get(position-lv.getHeaderViewsCount()).getCommentsUrl();
+//        int viewType = totalList.get(position-lv.getHeaderViewsCount()).getViewType();
+//        String title = totalList.get(position-lv.getHeaderViewsCount()).getTitle();
+        String webUrl = totalList.get(position-lv.getHeaderViewsCount()).getLink().getWeburl();
+        Intent intent = new Intent(getActivity(),NewsTopContent_Activity.class);
+//        intent.putExtra(Constant.ITEM_ID,itemId);
+//        intent.putExtra(Constant.ITEM_COMMENTSURL,commentsUrl);
+//        intent.putExtra(Constant.ITEM_VIEWTYPE,viewType);
+//        intent.putExtra(Constant.ITEM_TITLE,title);
+        intent.putExtra(Constant.ITEM_WEBURL,webUrl);
+        startActivity(intent);
     }
 
 
@@ -423,4 +441,6 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
             bannerView = null;
         }
     }
+
+
 }

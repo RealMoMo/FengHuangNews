@@ -3,9 +3,11 @@ package momo.com.week10_project.entity;
 import java.util.List;
 
 /**
- * Created by Administrator on 2016/12/12 0012.
+ * 解析视频的实体Entity
+ *
+ * 只有精选视频TypesEntity
  */
-public class Test {
+public class VideoEntity {
 
     /**
      * types : [{"id":"clientvideo_9","name":"娱乐","chType":"video","position":"down"},{"id":"clientvideo_18","name":"美食","chType":"video","position":"down"},{"id":"clientvideo_22","name":"锵锵三人行","chType":"video","position":"down"},{"id":"clientvideo_5","name":"军事","chType":"video","position":"up"},{"id":"clientvideo_24","name":"综艺","chType":"video","position":"up"},{"id":"clientvideo_10","name":"体育","chType":"video","position":"up"},{"id":"clientvideo_8","name":"生活","chType":"video","position":"up"},{"id":"clientvideo_25","name":"纪录片","chType":"video","position":"up"},{"id":"clientvideo_4","name":"社会","chType":"video","position":"up"},{"id":"clientvideo_27","name":"萌萌哒","chType":"video","position":"up"},{"id":"clientvideo_2","name":"段子","chType":"video","position":"down"},{"id":"clientvideo_3","name":"历史","chType":"video","position":"up"},{"id":"clientvideo_1","name":"美女","chType":"video","position":"down"},{"id":"clientvideo_23","name":"鲁豫有约 ","chType":"video","position":"down"},{"id":"fm","type":"fm","name":"音频","api":"http://api.3g.ifeng.com/api_fm_homepage","chType":"other","position":"up"},{"id":"phtv","type":"normal","name":"凤凰卫视","api":"http://newsvcsp.ifeng.com/vcsp/appData/news/recommend.do","chType":"other","position":"up"},{"id":"live","type":"normal","name":"直播","api":"http://api.iclient.ifeng.com/ClientNews?id=ZBPD","chType":"other","position":"up"}]
@@ -133,8 +135,8 @@ public class Test {
         private String image;
         private String thumbnail;
         private String guid;
-        private int commentsall;
-        private int duration;
+        private String commentsall;
+        private String duration;
         private String shareUrl;
         private String commentsUrl;
         private String video_url;
@@ -172,11 +174,11 @@ public class Test {
             this.guid = guid;
         }
 
-        public void setCommentsall(int commentsall) {
+        public void setCommentsall(String commentsall) {
             this.commentsall = commentsall;
         }
 
-        public void setDuration(int duration) {
+        public void setDuration(String duration) {
             this.duration = duration;
         }
 
@@ -228,11 +230,11 @@ public class Test {
             return guid;
         }
 
-        public int getCommentsall() {
+        public String getCommentsall() {
             return commentsall;
         }
 
-        public int getDuration() {
+        public String getDuration() {
             return duration;
         }
 

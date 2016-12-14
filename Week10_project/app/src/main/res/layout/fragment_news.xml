@@ -54,6 +54,7 @@
         app:tabTextColor="@color/news_tablayout_normal" />
 
         <ImageView
+            android:id="@+id/news_addmodule_iv"
             android:layout_marginRight="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -1,5 +1,6 @@
 package momo.com.week10_project.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -26,6 +27,8 @@ import momo.com.week10_project.R;
 import momo.com.week10_project.adapter.AbstractBaseAdapter;
 import momo.com.week10_project.entity.NewsSportEntity;
 import momo.com.week10_project.news_interface.NewsInterface;
+import momo.com.week10_project.ui.NewsTopContent_Activity;
+import momo.com.week10_project.utils.Constant;
 import momo.com.week10_project.utils.ManagerApi;
 import momo.com.week10_project.utils.TimeUtils;
 import momo.com.week10_project.widget.BannerView;
@@ -379,9 +382,13 @@ public class NewsSportItemFragment extends Fragment implements AdapterView.OnIte
 
     //listview item的点击事件
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        String weburl = totalList.get(position-lv.getHeaderViewsCount()).getLink().getWeburl();
+        Intent intent = new Intent(getActivity(),NewsTopContent_Activity.class);
+        intent.putExtra(Constant.ITEM_WEBURL,weburl);
+        startActivity(intent);
     }
+
 
 
     private String getUpdateTime(String sourceTime) {
@@ -427,4 +434,6 @@ public class NewsSportItemFragment extends Fragment implements AdapterView.OnIte
         lv.removeHeaderView(iconView);
         lv.removeHeaderView(nameView);
     }
+
+
 }

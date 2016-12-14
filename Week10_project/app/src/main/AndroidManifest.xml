@@ -22,15 +22,24 @@
         <activity
             android:name=".ui.MainActivity"
             android:theme="@style/MainActivityTheme" />
+
         <activity
             android:name=".ui.LiveActivity"
             android:theme="@style/LiveActivityTheme" />
-        <activity android:name=".ui.SearchActivity" />
-        <activity android:name=".ui.LiveDetailActivity"></activity>
+
+        <activity android:name=".ui.SearchActivity"
+            android:theme="@style/SearchActivityTheme"/>
+
+        <activity android:name=".ui.LiveDetailActivity" />
+
         <activity
             android:name=".ui.Live_lvContent_Activity"
             android:theme="@style/Live_lvContentActivityTheme" />
-        <activity android:name=".ui.NewsContent_Activity"></activity>
+
+        <!--展示新闻item内容的Activity-->
+        <activity
+            android:name=".ui.NewsTopContent_Activity"
+            android:theme="@style/News_ContentActivityTheme"></activity>
     </application>
 
 </manifest>

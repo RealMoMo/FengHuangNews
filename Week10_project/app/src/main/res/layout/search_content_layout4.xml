@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/search_lv_normal_height">
+
+    <TextView
+        android:id="@+id/search_lv4_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/search_lv_padding"
+        android:textColor="@color/search_lv_titleColor"
+        android:textSize="@dimen/search_lv_titlesize" />
+
+
+    <TextView
+        android:id="@+id/search_lv4_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/search_lv_padding"
+        android:textColor="@color/search_lv_sourceColor"
+        android:textSize="@dimen/search_lv_sourcesize" />
+
+</RelativeLayout>

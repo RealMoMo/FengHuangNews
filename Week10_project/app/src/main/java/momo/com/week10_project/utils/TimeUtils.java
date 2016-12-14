@@ -41,4 +41,18 @@ public class TimeUtils {
     }
 
 
+
+    public static String getPlayTime(String playtime){
+        int time = Integer.parseInt(playtime);
+        int a = time/10000;
+        int b = (time-10000*a)/1000;
+        if(a == 0){
+            return null;
+        }else{
+            return a+"."+b+"万";
+        }
+
+    }
+
+
 }

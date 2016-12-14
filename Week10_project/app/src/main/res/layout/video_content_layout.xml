@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/video_item_height"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+
+        <ImageView
+            android:id="@+id/video_item_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:padding="@dimen/video_item_titlePadding"
+            android:textSize="@dimen/video_item_titleSize"
+            android:textColor="@color/video_item_titleColor"
+            android:id="@+id/video_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:src="@drawable/channel_list_new_play_big"
+            android:id="@+id/video_item_play_iv"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/video_item_play_iv"
+            android:id="@+id/video_item_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/video_item_titleColor"
+            android:textSize="@dimen/video_item_durationSize"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:padding="@dimen/video_item_titlePadding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:gravity="center"
+            android:drawablePadding="@dimen/video_item_drawablePadding"
+            android:textSize="@dimen/video_item_commentsSize"
+            android:textColor="@color/video_item_commentsColor"
+            android:drawableLeft="@drawable/video_list_item_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/video_item_read"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:gravity="center"
+            android:drawablePadding="@dimen/video_item_drawablePadding"
+            android:textSize="@dimen/video_item_commentsSize"
+            android:textColor="@color/video_item_commentsColor"
+            android:drawableLeft="@drawable/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/video_item_comments"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
