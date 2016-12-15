@@ -40,13 +40,13 @@
                 android:layout_gravity="right|center_vertical"
                 android:paddingRight="@dimen/search_layoutpadding"
                 android:src="@drawable/btn_clear_editnickname_text_icon"
-                android:visibility="gone" />
+                android:visibility="invisible" />
 
 
         </FrameLayout>
 
         <TextView
-            android:id="@+id/tv_cancel_search"
+            android:id="@+id/search_tv_cancel_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -62,9 +62,36 @@
         android:layout_height="1dp"
         android:background="@color/search_sp" />
 
-    <ListView
-        android:id="@+id/search_lv"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/search_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/search_loading_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/search_loading"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:padding="@dimen/search_padding"
+            android:id="@+id/search_loadingmore_iv"
+            android:visibility="gone"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_loadingmore"/>
+
+    </FrameLayout>
+
+
+
 
 </LinearLayout>

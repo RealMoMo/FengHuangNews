@@ -35,6 +35,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class VideoOtherItemFragment extends Fragment implements  AbsListView.OnScrollListener {
 
 
+
     private String typeId;
     private int page=1;
     //标识：是否初次进入，针对刷新头
@@ -44,7 +45,7 @@ public class VideoOtherItemFragment extends Fragment implements  AbsListView.OnS
     private PtrClassicFrameLayout refresh;
     private ListView lv;
 
-    private VideoItemAdapter adapter;
+    public VideoItemAdapter adapter;
     //所有视频内容的集合
     private List<VideoEntity.ItemEntity> totalList;
 
@@ -170,4 +171,9 @@ public class VideoOtherItemFragment extends Fragment implements  AbsListView.OnS
                 isAddMore = false;
             }
     }
+
+
+
+
+
 }

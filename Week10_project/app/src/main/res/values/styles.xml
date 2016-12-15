@@ -41,6 +41,12 @@
 
     </style>
 
+
+    <!--LoginActivity theme-->
+    <style name="LoginActivityTheme" parent="WelcomeTheme">
+
+    </style>
+
     <style name="account_secondhead_textview_style">
         <item name="android:layout_margin">5dp</item>
         <item name="android:drawablePadding">@dimen/fragment_account_secondhead_padding</item>

@@ -28,6 +28,7 @@
             android:src="@drawable/channel_right_image_icon"/>
 
         <TextView
+            android:id="@+id/search_lv3_videoLen"
             android:layout_marginLeft="@dimen/search_lv_playmargin"
             android:gravity="center"
             android:textSize="@dimen/search_lv_sourcesize"

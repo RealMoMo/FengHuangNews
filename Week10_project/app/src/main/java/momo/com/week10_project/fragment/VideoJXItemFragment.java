@@ -42,7 +42,7 @@ public class VideoJXItemFragment extends Fragment implements AbsListView.OnScrol
     private PtrClassicFrameLayout refresh;
     private ListView lv;
 
-    private VideoItemAdapter adapter;
+    public VideoItemAdapter adapter;
     //所有视频内容的集合
     private List<VideoEntity.ItemEntity> totalList;
 

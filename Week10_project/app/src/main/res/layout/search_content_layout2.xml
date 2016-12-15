@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <TextView
+        android:singleLine="true"
         android:id="@+id/search_lv2_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,7 +23,7 @@
         android:padding="@dimen/search_lv_moreimg_margin">
 
         <ImageView
-            android:id="@+id/serach_lv2_iv1"
+            android:id="@+id/search_lv2_iv1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

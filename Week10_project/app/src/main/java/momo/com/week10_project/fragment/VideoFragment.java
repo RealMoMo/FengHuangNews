@@ -1,5 +1,6 @@
 package momo.com.week10_project.fragment;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -14,9 +15,11 @@ import java.util.List;
 
 import momo.com.week10_project.R;
 import momo.com.week10_project.adapter.NewsViewPagerAdapter;
+import momo.com.week10_project.adapter.VideoItemAdapter;
 import momo.com.week10_project.entity.VideoEntity;
 import momo.com.week10_project.news_interface.VideoInterface;
 import momo.com.week10_project.utils.Constant;
+import momo.com.week10_project.utils.LogUtils;
 import momo.com.week10_project.utils.ManagerApi;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -27,9 +30,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * Created by Administrator on 2016/12/10 0010.
  */
-public class VideoFragment extends Fragment{
+public class VideoFragment extends Fragment implements ViewPager.OnPageChangeListener {
 
-    private final String COMMON ="clientvideo";
+    private final String COMMON = "clientvideo";
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -39,6 +42,9 @@ public class VideoFragment extends Fragment{
     private List<Fragment> fragmentList;
 
     private NewsViewPagerAdapter adpater;
+
+    //记录上次viewpager的滑动位置
+    private int lastPostion;
 
 
 
@@ -54,11 +60,10 @@ public class VideoFragment extends Fragment{
         channelTypeId.add("JX");
         fragmentList = new ArrayList<>();
 
-        adpater = new NewsViewPagerAdapter(getContext(),getChildFragmentManager(),fragmentList,channelName);
+        adpater = new NewsViewPagerAdapter(getContext(), getChildFragmentManager(), fragmentList, channelName);
 
         //获取视频种类的信息(异步进行,所以fragment初始化在Retrofit请求完进行)
         getVideoChannelData();
-
 
 
     }
@@ -67,12 +72,12 @@ public class VideoFragment extends Fragment{
 
         for (int i = 0; i < channelName.size(); i++) {
             Fragment fragment;
-            if(i==0) {
+            if (i == 0) {
                 fragment = new VideoJXItemFragment();
-            }else{
+            } else {
                 fragment = new VideoOtherItemFragment();
                 Bundle bundle = new Bundle();
-                bundle.putString(Constant.VIDEO_CHANNELID,channelTypeId.get(i));
+                bundle.putString(Constant.VIDEO_CHANNELID, channelTypeId.get(i));
                 fragment.setArguments(bundle);
             }
             fragmentList.add(fragment);
@@ -82,28 +87,31 @@ public class VideoFragment extends Fragment{
     private void getVideoChannelData() {
 
         Retrofit retrofit = new Retrofit.Builder()
-                                .baseUrl(ManagerApi.BASEURL)
-                                .addConverterFactory(GsonConverterFactory.create())
-                                .build();
+                .baseUrl(ManagerApi.BASEURL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
         VideoInterface videoInterface = retrofit.create(VideoInterface.class);
         Call<List<VideoEntity>> call = videoInterface.getVideoEntity(1);
         call.enqueue(new Callback<List<VideoEntity>>() {
             @Override
             public void onResponse(Call<List<VideoEntity>> call, Response<List<VideoEntity>> response) {
-                List<VideoEntity> testList = response.body();
-                List<VideoEntity.TypesEntity> test = testList.get(0).getTypes();
-                for (int i = 0; i < test.size() ; i++) {
-                    //最后返回的  音频  凤凰卫视 直播布局内容与前面的不一样，各自都要单独处理
-                    if(test.get(i).getId().contains(COMMON)) {
-                        channelName.add(test.get(i).getName());
-                        channelTypeId.add(test.get(i).getId());
+                if (response.body() != null) {
+                    List<VideoEntity> testList = response.body();
+                    List<VideoEntity.TypesEntity> test = testList.get(0).getTypes();
+                    for (int i = 0; i < test.size(); i++) {
+                        //最后返回的  音频  凤凰卫视 直播布局内容与前面的不一样，各自都要单独处理
+                        if (test.get(i).getId().contains(COMMON)) {
+                            channelName.add(test.get(i).getName());
+                            channelTypeId.add(test.get(i).getId());
+                        }
+
                     }
 
-                }
+                    initVideoItemFragment();
+                    adpater.notifyDataSetChanged();
 
-                initVideoItemFragment();
-                adpater.notifyDataSetChanged();
+                }
             }
 
             @Override
@@ -113,13 +121,12 @@ public class VideoFragment extends Fragment{
         });
 
 
-
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_video,container,false);
+        View view = inflater.inflate(R.layout.fragment_video, container, false);
 
         return view;
     }
@@ -132,6 +139,7 @@ public class VideoFragment extends Fragment{
     }
 
     private void setupViews(View view) {
+
         tabLayout = (TabLayout) view.findViewById(R.id.video_tablayout);
         viewPager = (ViewPager) view.findViewById(R.id.video_viewpager);
 
@@ -139,6 +147,92 @@ public class VideoFragment extends Fragment{
         viewPager.setAdapter(adpater);
         tabLayout.setupWithViewPager(viewPager);
 
+        viewPager.addOnPageChangeListener(this);
 
+
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+
+    @Override
+    public void onPageSelected(int position) {
+
+        //处理视频模块切换，是否有视频正在播放。（不管3721，直接停止）
+        if (lastPostion == 0) {
+            VideoJXItemFragment fragment = (VideoJXItemFragment) fragmentList.get(lastPostion);
+            VideoItemAdapter itemAdapter = fragment.adapter;
+            MediaPlayer mediaPlayer = itemAdapter.getMediaPlayer();
+            if(mediaPlayer.isPlaying()) {
+                mediaPlayer.pause();
+                mediaPlayer.stop();
+            }
+            itemAdapter.setCurrentPlayerPosition(-1);
+            itemAdapter.notifyDataSetChanged();
+
+        } else {
+            VideoOtherItemFragment fragment = (VideoOtherItemFragment) fragmentList.get(lastPostion);
+            VideoItemAdapter itemAdapter = fragment.adapter;
+            MediaPlayer mediaPlayer = itemAdapter.getMediaPlayer();
+
+            if(mediaPlayer.isPlaying()) {
+                mediaPlayer.pause();
+                mediaPlayer.stop();
+            }
+            itemAdapter.setCurrentPlayerPosition(-1);
+            itemAdapter.notifyDataSetChanged();
+        }
+
+        lastPostion = position;
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
+    }
+
+
+    //处理tabhost切换到其他界面-->视频也要停止(时有bug =.=#)
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        LogUtils.MyLog("onDestroyView momo");
+        //处理视频模块切换，是否有视频正在播放。（不管3721，直接停止）
+        if (lastPostion == 0&&fragmentList.size()>0) {
+            VideoJXItemFragment fragment = (VideoJXItemFragment) fragmentList.get(lastPostion);
+            VideoItemAdapter itemAdapter = fragment.adapter;
+            MediaPlayer mediaPlayer = itemAdapter.getMediaPlayer();
+            if(mediaPlayer.isPlaying()) {
+                mediaPlayer.pause();
+                mediaPlayer.stop();
+            }
+            itemAdapter.setCurrentPlayerPosition(-1);
+
+
+
+        } else if(lastPostion !=0&&fragmentList.size()>0){
+            VideoOtherItemFragment fragment = (VideoOtherItemFragment) fragmentList.get(lastPostion);
+            VideoItemAdapter itemAdapter = fragment.adapter;
+            MediaPlayer mediaPlayer = itemAdapter.getMediaPlayer();
+            if(mediaPlayer.isPlaying()) {
+                mediaPlayer.pause();
+                mediaPlayer.stop();
+            }
+            itemAdapter.setCurrentPlayerPosition(-1);
+
+
+        }
+
+        lastPostion = 0;
+    }
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        LogUtils.MyLog("onDestroy momo");
     }
 }

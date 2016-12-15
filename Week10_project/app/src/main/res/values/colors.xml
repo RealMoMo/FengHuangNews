@@ -22,7 +22,7 @@
     <color name="fragment_account_sp">#F1F1F1</color>
     <color name="fragment_account_item_text">#1A1A1A</color>
 
-    <!--liveactivity-->
+    <!--liveactivity & loginactivity-->
     <color name="activity_live_titleBackground">#F5F5F5</color>
     <color name="activity_live_titleColor">#000</color>
     <color name="activity_live_lvColor">#fff</color>
@@ -36,13 +36,14 @@
     <color name="video_item_titleColor">#fff</color>
     <color name="video_item_commentsColor">#9A9A9A</color>
 
-    <!--searchactivity titlebar-->
+    <!--searchactivity -->
     <color name="search_LayoutBackground">#f0f0f0</color>
     <color name="search_Background">#fff</color>
     <color name="search_edittext_hintColor">#C0C0C0</color>
     <color name="search_edittext_textColor">#000</color>
     <color name="search_btnColor">#F54949</color>
     <color name="search_sp">#C0C0C0</color>
+    <color name="search_loadinmoreiv_Background">#fff</color>
 
     <!--searchactivity listview item-->
     <color name="search_lv_titleColor">#000</color>

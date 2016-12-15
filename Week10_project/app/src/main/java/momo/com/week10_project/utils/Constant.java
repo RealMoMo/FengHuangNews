@@ -33,4 +33,8 @@ public class Constant {
     public static final String VIDEO_CHANNELNAME="video_channelName";
     //点击视频界面的子item跳转的channelTypeId
     public static final String VIDEO_CHANNELID="video_channelId";
+
+    //登录的intent的key值
+    public static final String LOGIN_ICON="icon";
+    public static final String LOGIN_NAME="username";
 }

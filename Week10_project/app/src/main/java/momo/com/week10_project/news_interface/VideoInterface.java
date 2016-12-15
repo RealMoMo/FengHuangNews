@@ -2,7 +2,7 @@ package momo.com.week10_project.news_interface;
 
 import java.util.List;
 
-import momo.com.week10_project.entity.Test;
+import momo.com.week10_project.entity.SearchEntity;
 import momo.com.week10_project.entity.VideoEntity;
 import momo.com.week10_project.utils.ManagerApi;
 import retrofit2.Call;
@@ -23,7 +23,7 @@ public interface VideoInterface {
                                             ,@Query("typeid")String typeid);
 
     @GET(ManagerApi.VIDEO_JX)
-    Call<List<Test>> getTestoEntity(@Query("page")int page);
+    Call<List<SearchEntity>> getTestoEntity(@Query("page")int page);
 
 
 

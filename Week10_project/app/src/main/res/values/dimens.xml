@@ -18,7 +18,7 @@
     <dimen name="fragment_account_itemtext_margin">5dp</dimen>
     <dimen name="fragment_account_item_textsize">15sp</dimen>
 
-    <!--liveactivity-->
+    <!--liveactivity & loginactivity-->
     <dimen name="activity_live_textsize">20sp</dimen>
     <dimen name="activity_live_titlePadding">10dp</dimen>
     <dimen name="activity_live_lv_height">160dp</dimen>
@@ -69,7 +69,9 @@
     <dimen name="search_lv_titlesize">16dp</dimen>
     <dimen name="search_lv_sourcesize">12dp</dimen>
     <dimen name="search_lv_playmargin">5dp</dimen>
+    <dimen name="search_lv_noimg_height">90dp</dimen>
 
-
+    <!--login dialog-->
+    <dimen name="login_dialog_padding">20dp</dimen>
 
 </resources>

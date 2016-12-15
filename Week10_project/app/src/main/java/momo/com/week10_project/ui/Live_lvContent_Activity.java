@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
@@ -87,17 +86,17 @@ public class Live_lvContent_Activity extends AppCompatActivity {
     }
 
     //点击backspace可返回上个页面，而不是退出(若webview只加载了一个页面)
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        // TODO Auto-generated method stub
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            // 按返回时，看网页是否能返回
-            if (webView.canGoBack()) {
-                webView.goBack();
-                //返回true webview自己处理
-                return true;
-            }
-        }
-        return super.onKeyDown(keyCode, event);
-    }
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        // TODO Auto-generated method stub
+//        if (keyCode == KeyEvent.KEYCODE_BACK) {
+//            // 按返回时，看网页是否能返回
+//            if (webView.canGoBack()) {
+//                webView.goBack();
+//                //返回true webview自己处理
+//                return true;
+//            }
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 }
