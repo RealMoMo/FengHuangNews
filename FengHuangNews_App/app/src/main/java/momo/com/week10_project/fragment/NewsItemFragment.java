@@ -39,7 +39,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * 新闻--头条fragment
+ * 新闻--头条fragment,有顶置的专题 单图（含不置顶的专题） 多图 新闻轮播 视频
  */
 public class NewsItemFragment extends Fragment implements AdapterView.OnItemClickListener, AbsListView.OnScrollListener {
 
@@ -55,11 +55,12 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
     private ListView lv;
     //新闻轮播View
     private BannerView<NewsTopEntity.ItemEntity> bannerView;
+
     private AbstractBaseAdapter<NewsTopEntity.ItemEntity> adapter;
 
     //所有的itemlist
     private List<NewsTopEntity.ItemEntity> totalList;
-    //放专题的itemlist
+    //放置顶专题的itemlist
     private List<NewsTopEntity.ItemEntity> topList;
     //只放普通新闻的itemlist
     private List<NewsTopEntity.ItemEntity> itemList;
@@ -71,11 +72,7 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
     public void onCreate(@Nullable Bundle bundle) {
         super.onCreate(bundle);
 
-
         initData();
-
-
-
 
     }
 
@@ -109,8 +106,8 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
                             tv_source.setText(itemEntity.getSource() + "  " + getUpdateTime(itemEntity.getUpdateTime()));
                         }else{
                             //不置顶的专题
-                            itemEntity.setTitle(Constant.Top_TITLE);
-                            tv_source.setText(itemEntity.getTitle());
+                            itemEntity.setSource(Constant.Top_TITLE);
+                            tv_source.setText(itemEntity.getSource());
                         }
                     }
                     break;
@@ -194,7 +191,7 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
     private void setupViews(View view) {
         lv = (ListView) view.findViewById(R.id.newstop_lv);
         lv.setAdapter(adapter);
-        //还是首次加载数据，viewpager切换回来，广告保留(若用回来的bannerView切换不流畅，所以在ondestoryView将bannerView=null)
+        //还是首次加载数据，viewpager切换回来，广告保留(若用原来的bannerView切换不流畅，不知道为什么？所以在ondestoryView将bannerView=null)
         if(bannerList.size()>0&& action.equals("default")){
 
             bannerView = new BannerView<NewsTopEntity.ItemEntity>(getActivity(),bannerList) {
@@ -228,7 +225,7 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
         refresh.setLastUpdateTimeRelateObject(this);
         //初次进来，自动刷新
         if(flag ==true) {
-
+            //在刷新头控件加载完成后 ，自动刷新。
             refresh.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
                 @Override
                 public void onGlobalLayout() {
@@ -253,7 +250,7 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
                 getNewsData();
 
             }
-
+            //解决刷新控件与listview的滑动冲突
             @Override
             public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
                 return super.checkCanDoRefresh(frame, lv, header);
@@ -274,7 +271,7 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
         call.enqueue(new Callback<List<NewsTopEntity>>() {
             @Override
             public void onResponse(Call<List<NewsTopEntity>> call, Response<List<NewsTopEntity>> response) {
-                //非首次加载数据，移除广告
+                //非首次自动加载数据，移除广告
                 if(bannerView!=null&& !action.equals("default")){
                     lv.removeHeaderView(bannerView);
                     bannerView =null;
@@ -309,11 +306,12 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
                                     entity.get(i).getItem().get(j).setViewType(3);
                                 }
                             }
-                            //下拉刷新，最新数据放到
+                            //下拉刷新，最新数据放到最前面。首先，这里先把之前的数据放到itemlist。最后（在for循环体外面），把itemlist 加到totallist
                             if (action.equals("down")) {
                                 itemList.addAll(entity.get(i).getItem());
                                 itemList.addAll(totalList);
                             } else {
+                                //上拉加载更多（在for循环体外面），直接加到totallist
                                 itemList.addAll(entity.get(i).getItem());
                             }
                         }
@@ -342,7 +340,6 @@ public class NewsItemFragment extends Fragment implements AdapterView.OnItemClic
                             };
 
                             lv.addHeaderView(bannerView,null,false);
-
 
                         }
                         break;

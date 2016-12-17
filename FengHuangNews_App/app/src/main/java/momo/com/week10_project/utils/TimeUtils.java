@@ -12,7 +12,7 @@ import java.util.Date;
 public class TimeUtils {
 
     /**
-     * 获取视频时长：x分x秒
+     * 获取视频时长：x分x秒:格式x'x'' 或 x''
      * @param sourceTime
      * @return
      */

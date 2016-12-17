@@ -64,7 +64,6 @@ public class VideoJXItemFragment extends Fragment implements AbsListView.OnScrol
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-
         return inflater.inflate(R.layout.video_item,container,false);
     }
 
@@ -79,7 +78,6 @@ public class VideoJXItemFragment extends Fragment implements AbsListView.OnScrol
         refresh = (PtrClassicFrameLayout) view.findViewById(R.id.video_item_refresh);
         lv = (ListView) view.findViewById(R.id.video_item_lv);
         lv.setAdapter(adapter);
-
 
         lv.setOnScrollListener(this);
 
@@ -136,7 +134,6 @@ public class VideoJXItemFragment extends Fragment implements AbsListView.OnScrol
                 }
                 totalList.addAll(entityList);
                 adapter.notifyDataSetChanged();
-
 
                 refresh.refreshComplete();
             }

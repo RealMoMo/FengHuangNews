@@ -24,7 +24,6 @@ import momo.com.week10_project.R;
 import momo.com.week10_project.adapter.AbstractBaseAdapter;
 import momo.com.week10_project.entity.ReadContentEntity;
 import momo.com.week10_project.news_interface.ReadInterface;
-import momo.com.week10_project.utils.LogUtils;
 import momo.com.week10_project.utils.ManagerApi;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -234,7 +233,7 @@ public class ReadFragment extends Fragment implements AbsListView.OnScrollListen
 
             @Override
             public void onFailure(Call<ReadContentEntity> call, Throwable t) {
-                LogUtils.MyLog("onFailure");
+//                LogUtils.MyLog("getReadContentData onFailure");
                 refresh.refreshComplete();
             }
         });

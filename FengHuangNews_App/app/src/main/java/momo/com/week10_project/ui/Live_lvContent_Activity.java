@@ -15,8 +15,10 @@ import android.widget.ImageView;
 
 import momo.com.week10_project.R;
 import momo.com.week10_project.utils.Constant;
-import momo.com.week10_project.utils.LogUtils;
 
+/**
+ * webview展示直播内容
+ */
 public class Live_lvContent_Activity extends AppCompatActivity {
 
 
@@ -37,12 +39,8 @@ public class Live_lvContent_Activity extends AppCompatActivity {
         Intent intent = getIntent();
         url = intent.getStringExtra(Constant.LIVE_LVCONTENT_URL);
 
-
         initAnimation();
         initWebView();
-
-
-
 
     }
 
@@ -71,7 +69,6 @@ public class Live_lvContent_Activity extends AppCompatActivity {
                 super.onPageFinished(view, url);
                 iv.setVisibility(View.INVISIBLE);
                 webView.setVisibility(View.VISIBLE);
-                LogUtils.MyLog("onPageFinished");
             }
         });
         webView.setWebChromeClient(new WebChromeClient(){

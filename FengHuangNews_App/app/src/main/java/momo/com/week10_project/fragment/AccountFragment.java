@@ -69,6 +69,7 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
                 String headUrl = data.getStringExtra(Constant.LOGIN_ICON);
                 String name = data.getStringExtra(Constant.LOGIN_NAME);
 
+                //生成圆形图片
                 Glide.with(this).load(headUrl).asBitmap().centerCrop().into(new BitmapImageViewTarget(iv_head) {
                     @Override
                     protected void setResource(Bitmap resource) {

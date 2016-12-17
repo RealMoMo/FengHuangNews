@@ -81,10 +81,6 @@ public abstract class BannerView<T> extends FrameLayout{
     }
 
 
-
-
-
-
     public void setBannerContent(){
 
 
@@ -98,6 +94,11 @@ public abstract class BannerView<T> extends FrameLayout{
 
     }
 
-
+    /**
+     * 设置轮播图片地址集合和标题集合
+     * 最后，banner.start();即可
+     * @param banner
+     * @param list
+     */
     public abstract void bindData(Banner banner,List<T> list);
 }

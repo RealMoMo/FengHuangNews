@@ -170,7 +170,6 @@ public class NewsSportItemFragment extends Fragment implements AdapterView.OnIte
             public int getItemViewType(int position) {
                 int tmpType = totalList.get(position).getViewType();
 
-
                 return tmpType;
             }
         };

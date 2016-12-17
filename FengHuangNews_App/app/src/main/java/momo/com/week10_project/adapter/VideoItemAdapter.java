@@ -23,7 +23,7 @@ import momo.com.week10_project.entity.VideoEntity;
 import momo.com.week10_project.utils.TimeUtils;
 
 /**
- * Created by Administrator on 2016/12/14 0014.
+ * videoitemfragment的listview adapter
  */
 public class VideoItemAdapter extends BaseAdapter {
 
@@ -32,15 +32,7 @@ public class VideoItemAdapter extends BaseAdapter {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-//                TextView tv = (TextView) msg.obj;
-//            if(player.isPlaying()) {
-//                tv.setText(TimeUtils.getVideoPlayTime(player.getCurrentPosition()));
-//
-//            }
-//
-//            Message message = obtainMessage();
-//            message.obj = tv;
-//            sendMessageDelayed(message,1000);
+
             ViewHolder holder = (ViewHolder) msg.obj;
             if(player.isPlaying()){
                 holder.tv_now.setText(TimeUtils.getVideoPlayTime(player.getCurrentPosition()));
@@ -133,16 +125,12 @@ public class VideoItemAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-
         viewHolder.tv_title.setText(list.get(position).getTitle());
         viewHolder.tv_duration.setText(TimeUtils.getVideoTime(list.get(position).getDuration()));
         viewHolder.tv_read.setText(list.get(position).getPlayTime());
         viewHolder.tv_comments.setText(list.get(position).getCommentsall());
 
-
-
         Glide.with(context).load(list.get(position).getImage()).into(viewHolder.iv_thumb);
-
 
         Object tag = viewHolder.iv_play.getTag();
         if (tag != null) {

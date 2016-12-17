@@ -28,7 +28,7 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
 //            "头条","体育","热点","娱乐","财经","凤凰","科技","社会"
 //    };
 
-    //后续做全面，存储新闻模块的种类，用数据库存储种类名，与api地址。
+    //后续若要做全面，存储新闻模块的种类，用数据库存储种类名，与api地址。
     private List<String> titlesList ;
 
     private TabLayout tabLayout;

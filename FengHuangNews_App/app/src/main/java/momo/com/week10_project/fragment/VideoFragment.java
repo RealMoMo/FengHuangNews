@@ -36,8 +36,11 @@ public class VideoFragment extends Fragment implements ViewPager.OnPageChangeLis
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
+    //tablayout titles的集合
     private List<String> channelName;
+    //视频接口拼接该typeid数据，可得到该类型内容的视频数据，需传到对应的fragment
     private List<String> channelTypeId;
+
     private List<Fragment> fragmentList;
 
     private NewsViewPagerAdapter adpater;
@@ -54,7 +57,7 @@ public class VideoFragment extends Fragment implements ViewPager.OnPageChangeLis
         channelName = new ArrayList<>();
 
         channelTypeId = new ArrayList<>();
-        //占第一个位置而已
+        //因为数据没有返回精选item的信息，所以默认精选占第一个位置而已
         channelName.add("精选");
         channelTypeId.add("JX");
         fragmentList = new ArrayList<>();
@@ -99,7 +102,7 @@ public class VideoFragment extends Fragment implements ViewPager.OnPageChangeLis
                     List<VideoEntity> testList = response.body();
                     List<VideoEntity.TypesEntity> test = testList.get(0).getTypes();
                     for (int i = 0; i < test.size(); i++) {
-                        //最后返回的  音频  凤凰卫视 直播布局内容与前面的不一样，各自都要单独处理
+                        //最后返回的  音频  凤凰卫视 直播布局内容与前面的不一样，各自都要单独处理。所以，暂时没有加这几个模块。
                         if (test.get(i).getId().contains(COMMON)) {
                             channelName.add(test.get(i).getName());
                             channelTypeId.add(test.get(i).getId());
@@ -194,12 +197,13 @@ public class VideoFragment extends Fragment implements ViewPager.OnPageChangeLis
     }
 
 
-    //处理tabhost切换到其他界面-->视频也要停止(时有bug =.=#)
+    //处理tabhost切换到其他界面-->视频也要停止(可能时有bug =.=#，反正我最近测又没有)
     @Override
     public void onDestroyView() {
         super.onDestroyView();
 //        LogUtils.MyLog("onDestroyView momo");
         //处理视频模块切换，是否有视频正在播放。（不管3721，直接停止）
+
         if (lastPostion == 0&&fragmentList.size()>0) {
             VideoJXItemFragment fragment = (VideoJXItemFragment) fragmentList.get(lastPostion);
             VideoItemAdapter itemAdapter = fragment.adapter;
@@ -209,7 +213,6 @@ public class VideoFragment extends Fragment implements ViewPager.OnPageChangeLis
                 mediaPlayer.stop();
             }
             itemAdapter.setCurrentPlayerPosition(-1);
-
 
 
         } else if(lastPostion !=0&&fragmentList.size()>0){
@@ -222,11 +225,12 @@ public class VideoFragment extends Fragment implements ViewPager.OnPageChangeLis
             }
             itemAdapter.setCurrentPlayerPosition(-1);
 
-
         }
 
         lastPostion = 0;
     }
+
+
 
 
     //最好在这里处理按home键和tabhost切换fragment，停止视频播放(可是为什么按了home就不会播放？)

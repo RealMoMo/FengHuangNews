@@ -115,10 +115,9 @@ public class LiveActivity extends AppCompatActivity implements View.OnClickListe
             public void bindData(int position, ViewHolder holder) {
                 LiveContentEntity.ItemEntity itemEntity = itemList.get(position);
 
+                //最好应该在getLiveContentData()的直接判断好类型，并把类型值设置到该shitiEntity数据中。
                 String itemType = itemEntity.getType();
                 int type = itemType.equals(NORMAL_LIVE)?0:1;
-//                LogUtils.MyLog("type:"+type);
-//                int type = getItemViewType(position);
                 //普通直播布局
                 if(type ==0){
                     //图片
@@ -226,18 +225,16 @@ public class LiveActivity extends AppCompatActivity implements View.OnClickListe
                 List<LiveContentEntity> entity = response.body();
                 //直播全部信息
                 LiveContentEntity contentEntity = entity.get(0);
-                //entity.get(1)   ---是直播预告的轮播信息
+                // page=1的时候，entity.get(1)   ---是直播预告的轮播信息
 
                 //直播的item信息
                 List<LiveContentEntity.ItemEntity> item = contentEntity.getItem();
                 //下拉刷新，清空数据
                 if (page==1){
                     itemList.clear();
-
                 }
 
                 itemList.addAll(item);
-
 
                 adapter.notifyDataSetChanged();
 

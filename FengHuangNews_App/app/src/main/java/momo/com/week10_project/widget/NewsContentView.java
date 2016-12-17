@@ -5,6 +5,10 @@ import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
 /**
+ *
+ * 尚未使用
+ * ---------------------------
+ *
  * 自定义View,用来显示详情界面
  *
  * 界面格式：
