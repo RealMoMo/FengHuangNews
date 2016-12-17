@@ -1,0 +1,464 @@
+1.
+  
+  
+  {
+                "thumbnail": "http://d.ifengimg.com/w134_h96_q80/p3.ifengimg.com/a/2016_51/b6a77923ef42fed_size28_w580_h385.jpg", 
+                "online": "1", 
+                "title": "男子酒后大闹KTV点燃汽油 4名警察被严重烧伤", 
+                "showType": "0", 
+                "source": "华商报", 
+                "subscribe": {
+                    "cateid": "", 
+                    "type": "source", 
+                    "catename": "华商报", 
+                    "logo": "", 
+                    "description": ""
+                }, 
+                "updateTime": "2016/12/12 02:33:34", 
+                "id": "http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030000050399741", 
+                "documentId": "cmpp_030000050399741", 
+                "type": "doc", 
+                "commentsUrl": "http://t.ifeng.com/appshare/7349458.shtml", 
+                "comments": "0", 
+                "commentsall": "0", 
+                "link": {
+                    "type": "doc", 
+                    "url": "http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030000050399741", 
+                    "weburl": "http://share.iclient.ifeng.com/sharenews.f?aid=cmpp_030000050399741"
+                }, 
+                "simId": "clusterId_3809376", 
+                "reftype": "remcommend"
+            }
+			
+			
+			
+2.
+
+
+ {
+                "thumbnail": "http://d.ifengimg.com/w134_h96_q80/p3.ifengimg.com/yidian/2016_51/8666c8854877e39_w770_h407.jpg", 
+                "online": "1", 
+                "title": "西媒：国家德比助理裁判被禁赛两周", 
+                "showType": "0", 
+                "source": "虎扑", 
+                "subscribe": {
+                    "cateid": "", 
+                    "type": "source", 
+                    "catename": "虎扑", 
+                    "logo": null, 
+                    "description": ""
+                }, 
+                "updateTime": "2016/12/12 04:22:56", 
+                "id": "http://api.iclient.ifeng.com/ipadtestdoc?aid=imcp_116296779", 
+                "documentId": "imcp_116296779", 
+                "type": "doc", 
+                "commentsUrl": "http://t.ifeng.com/appshare/7353247.shtml", 
+                "comments": "0", 
+                "commentsall": "0", 
+                "link": {
+                    "type": "doc", 
+                    "url": "http://api.iclient.ifeng.com/ipadtestdoc?aid=imcp_116296779", 
+                    "weburl": "http://share.iclient.ifeng.com/sharenews.f?aid=116296779"
+                }, 
+                "simId": "clusterId_3811178", 
+                "reftype": "remcommend"
+            }
+			
+			
+			
+3.多图
+
+{
+                "thumbnail": "http://d.ifengimg.com/w134_h96_q80/p2.ifengimg.com/yidian/2016_42/ec43eebbdaea65b_w736_h522.jpg", 
+                "online": "1", 
+                "title": "洗衣机脏得不行！这一招让它焕然一新", 
+                "showType": "0", 
+                "source": "央视财经", 
+                "subscribe": {
+                    "cateid": "", 
+                    "type": "source", 
+                    "catename": "央视财经", 
+                    "logo": null, 
+                    "description": ""
+                }, 
+                "updateTime": "2016/12/12 13:10:07", 
+                "id": "http://api.iclient.ifeng.com/ipadtestdoc?aid=imcp_116090028&perfectNew=1", 
+                "documentId": "imcp_116090028", 
+                "type": "doc", 
+                "style": {
+                    "type": "slides", 
+                    "images": [
+                        "http://d.ifengimg.com/w164_h113_q80/p0.ifengimg.com/yidian/2016_42/e164797be2752d9_w538_h602.jpg", 
+                        "http://d.ifengimg.com/w164_h113_q80/p1.ifengimg.com/yidian/2016_42/eb487e4e1fe5150_w336_h220.jpg", 
+                        "http://d.ifengimg.com/w164_h113_q80/p0.ifengimg.com/yidian/2016_42/59b14bddd6c5954_w566_h802.jpg", 
+                        "http://d.ifengimg.com/w164_h113_q80/p3.ifengimg.com/yidian/2016_42/7417149158c6574_w660_h756.jpg", 
+                        "http://d.ifengimg.com/w164_h113_q80/p2.ifengimg.com/yidian/2016_42/299a9abed357572_w573_h395.jpg"
+                    ], 
+                    "slideCount": 16
+                }, 
+                "hasSlide": true, 
+                "commentsUrl": "http://t.ifeng.com/appshare/7215015.shtml", 
+                "comments": "0", 
+                "commentsall": "0", 
+                "link": {
+                    "type": "doc", 
+                    "url": "http://api.iclient.ifeng.com/ipadtestdoc?aid=imcp_116090028&perfectNew=1", 
+                    "weburl": "http://share.iclient.ifeng.com/sharenews.f?aid=116090028"
+                }, 
+                "simId": "clusterId_2863709", 
+                "reftype": "remcommend"
+            }
+			
+			
+			
+4.多图
+ {
+                "thumbnail": "http://d.ifengimg.com/w134_h96_q80/p3.ifengimg.com/fck/2016_51/57a86c65af11359_w600_h317.jpg", 
+                "online": "1", 
+                "title": "央媒挨户走访核对：台风“达维”致死数疑瞒报30人", 
+                "showType": "0", 
+                "source": "央广新闻", 
+                "subscribe": {
+                    "cateid": "", 
+                    "type": "source", 
+                    "catename": "央广新闻", 
+                    "logo": null, 
+                    "description": ""
+                }, 
+                "updateTime": "2016/12/12 11:39:04", 
+                "id": "http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030000050402664", 
+                "documentId": "cmpp_030000050402664", 
+                "type": "doc", 
+                "style": {
+                    "type": "slides", 
+                    "images": [
+                        "http://d.ifengimg.com/w164_h113_q80/p3.ifengimg.com/fck/2016_51/c42039ec2cf02bf_w600_h357.jpg", 
+                        "http://d.ifengimg.com/w164_h113_q80/p3.ifengimg.com/fck/2016_51/f029d4fb853569e_w600_h367.jpg", 
+                        "http://d.ifengimg.com/w164_h113_q80/p3.ifengimg.com/fck/2016_51/91630cbb0b6251a_w600_h398.jpg", 
+                        "http://d.ifengimg.com/w164_h113_q80/p3.ifengimg.com/fck/2016_51/47d4d084c3bf5cb_w600_h490.jpg", 
+                        "http://d.ifengimg.com/w164_h113_q80/p3.ifengimg.com/fck/2016_51/ba4d1b198cb0c62_w600_h473.jpg"
+                    ], 
+                    "slideCount": 14
+                }, 
+                "hasSlide": true, 
+                "commentsUrl": "http://t.ifeng.com/appshare/7365470.shtml", 
+                "comments": "0", 
+                "commentsall": "0", 
+                "link": {
+                    "type": "doc", 
+                    "url": "http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030000050402664", 
+                    "weburl": "http://share.iclient.ifeng.com/sharenews.f?aid=cmpp_030000050402664"
+                }, 
+                "simId": "clusterId_3816687", 
+                "reftype": "remcommend"
+            }
+			
+			
+5.专题的listitem
+
+
+{
+        "listId":"SYLB10_TOP",
+        "type":"top",
+        "expiredTime":180000,
+        "currentPage":1,
+        "totalPage":1,
+        "item":[
+            {
+                "thumbnail":"http://d.ifengimg.com/w134_h96_q80/p0.ifengimg.com/cmpp/2016/12/12/e05dc37e1bf086971ae90b5eda2723af_size41_w168_h120.jpg",
+                "online":"0",
+                "title":"习近平用“四个有利于”为改革导航",
+                "id":"http://api.iclient.ifeng.com/TopicApiForCmpp?topicid=391&json=y&ad=y",
+                "documentId":"imcp_crc_1714726678",
+                "type":"topic2",
+                "commentsUrl":"http://inews.ifeng.com/ispecial/391/index.shtml",
+                "comments":"403",
+                "commentsall":"1015",
+                "styleType":"topic",
+                "link":{
+                    "type":"topic2",
+                    "url":"http://api.iclient.ifeng.com/TopicApiForCmpp?topicid=391&json=y&ad=y",
+                    "weburl":"http://api.iclient.ifeng.com/TopicApiForCmpp?topicid=391&ad=y"
+                },
+                "notShowDislikeReason":"1",
+                "reftype":"editor"
+            }
+        ]
+    }
+	
+6.轮播图
+
+{
+        "listId":"SYDT10",
+        "type":"focus",
+        "expiredTime":180000,
+        "currentPage":1,
+        "totalPage":11,
+        "item":[
+            {
+                "thumbnail":"http://p2.ifengimg.com/cmpp/2016/12/12/dae9b3585e8d28a5756cc5a7695ec69d_size428_w640_h360.jpg",
+                "online":"1",
+                "title":"她们曾在这里遭到性侵",
+                "showType":"0",
+                "source":"CNN",
+                "subscribe":{
+                    "cateid":"",
+                    "type":"source",
+                    "catename":"CNN",
+                    "logo":null,
+                    "description":""
+                },
+                "updateTime":"2016/12/12 14:48:28",
+                "id":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030240050403231",
+                "documentId":"cmpp_030240050403231",
+                "type":"slide",
+                "style":{
+                    "type":"slides",
+                    "images":[
+                        "http://d.ifengimg.com/w164_h113_q80/p2.ifengimg.com/a/2016_51/1853dcfd64769a0_size354_w591_h589.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p1.ifengimg.com/a/2016_51/a6c395e8e798d77_size349_w589_h594.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p2.ifengimg.com/a/2016_51/649e3f3843e3f2d_size345_w587_h587.jpg"
+                    ],
+                    "slideCount":12
+                },
+                "hasSlide":true,
+                "commentsUrl":"http://news.ifeng.com/a/20161212/50403231_0.shtml",
+                "comments":"250",
+                "commentsall":"1866",
+                "link":{
+                    "type":"slide",
+                    "url":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030240050403231",
+                    "weburl":"http://share.iclient.ifeng.com/sharenews.f?aid=030240050403231"
+                },
+                "reftype":"editor"
+            },
+            {
+                "thumbnail":"http://p3.ifengimg.com/cmpp/2016/12/12/740f0bc9b578fa98a61f1431ac695471_size472_w640_h360.jpg",
+                "online":"1",
+                "title":"刘銮雄婚后首度陪甘比现身",
+                "showType":"0",
+                "source":"凤凰网娱乐",
+                "subscribe":{
+                    "cateid":"",
+                    "type":"source",
+                    "catename":"凤凰网娱乐",
+                    "logo":"",
+                    "description":""
+                },
+                "updateTime":"2016/12/12 08:11:48",
+                "id":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_010230042779537",
+                "documentId":"cmpp_010230042779537",
+                "type":"slide",
+                "style":{
+                    "type":"slides",
+                    "images":[
+                        "http://d.ifengimg.com/w164_h113_q80/p1.ifengimg.com/cmpp/2016/12/12/a8f680cf0648d20bc346b8156aa6f867_size65_w206_h142.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p1.ifengimg.com/cmpp/2016/12/12/93b85826c8839adff3379865eb2e470d_size67_w206_h142.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p0.ifengimg.com/cmpp/2016/12/12/691f200b8f99f1b25fc5cf5eb8f76861_size54_w206_h142.jpg"
+                    ],
+                    "slideCount":8
+                },
+                "hasSlide":true,
+                "commentsUrl":"http://ent.ifeng.com/a/20161212/42779537_0.shtml",
+                "comments":"559",
+                "commentsall":"1816",
+                "link":{
+                    "type":"slide",
+                    "url":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_010230042779537",
+                    "weburl":"http://share.iclient.ifeng.com/sharenews.f?aid=010230042779537"
+                },
+                "reftype":"editor"
+            },
+            {
+                "thumbnail":"http://p2.ifengimg.com/cmpp/2016/12/12/c09a05e31a7efa7d6b219a6e9230bb80_size360_w640_h360.jpg",
+                "online":"1",
+                "title":"大熊猫的这一年",
+                "showType":"0",
+                "source":"新华网",
+                "subscribe":{
+                    "cateid":"",
+                    "type":"source",
+                    "catename":"新华网",
+                    "logo":"",
+                    "description":""
+                },
+                "updateTime":"2016/12/12 12:05:51",
+                "id":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030240050401967",
+                "documentId":"cmpp_030240050401967",
+                "type":"slide",
+                "style":{
+                    "type":"slides",
+                    "images":[
+                        "http://d.ifengimg.com/w164_h113_q80/p1.ifengimg.com/a/2016_51/aaa0d8453e98222_size76_w899_h585.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p1.ifengimg.com/a/2016_51/5952d33b70804be_size114_w899_h590.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p0.ifengimg.com/a/2016_51/734d4ef7d805015_size36_w930_h523.jpg"
+                    ],
+                    "slideCount":10
+                },
+                "hasSlide":true,
+                "commentsUrl":"http://news.ifeng.com/a/20161212/50401967_0.shtml",
+                "comments":"102",
+                "commentsall":"576",
+                "link":{
+                    "type":"slide",
+                    "url":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030240050401967",
+                    "weburl":"http://share.iclient.ifeng.com/sharenews.f?aid=030240050401967"
+                },
+                "reftype":"editor"
+            }
+        ]
+    },
+	
+	
+	
+	
+	
+	
+	广告的item
+	
+	
+	{
+                "thumbnail":"http://p3.ifengimg.com/cmpp/2016/12/12/355f6540712c06997a3b38ba440c1d84_size497_w640_h360.jpg",
+                "online":"1",
+                "title":"安倍不惧辐射品尝核灾区食物画面",
+                "showType":"0",
+                "source":"东方IC",
+                "subscribe":{
+                    "cateid":"",
+                    "type":"source",
+                    "catename":"东方IC",
+                    "logo":"",
+                    "description":""
+                },
+                "updateTime":"2016/12/12 16:58:52",
+                "id":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030240050403953",
+                "documentId":"cmpp_030240050403953",
+                "type":"slide",
+                "style":{
+                    "type":"slides",
+                    "images":[
+                        "http://d.ifengimg.com/w164_h113_q80/p0.ifengimg.com/a/2016_51/e391beaaab93cde_size258_w1024_h705.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p2.ifengimg.com/a/2016_51/c5f67f96ebac4c8_size186_w1024_h703.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p1.ifengimg.com/a/2016_51/54734e8dbd3a9fa_size227_w1024_h653.jpg"
+                    ],
+                    "slideCount":8
+                },
+                "hasSlide":true,
+                "commentsUrl":"http://news.ifeng.com/a/20161212/50403953_0.shtml",
+                "comments":"1743",
+                "commentsall":"2540",
+                "link":{
+                    "type":"slide",
+                    "url":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030240050403953",
+                    "weburl":"http://share.iclient.ifeng.com/sharenews.f?aid=030240050403953"
+                },
+                "reftype":"editor"
+            }
+			
+			
+			
+6.视频item
+{
+                "thumbnail":"http://d.ifengimg.com/w698_h392_q80/p2.ifengimg.com/a/2016_51/a7b4678ae370ec8_size93_w698_h392.jpg",
+                "online":"0",
+                "title":"12个侮辱智商的台词，脑子是好东西希望编剧也有",
+                "showType":"1",
+                "phvideo":{
+                    "channelName":"网罗天下",
+                    "length":209
+                },
+                "commentsUrl":"http://share.iclient.ifeng.com/sharenews.f?guid=01e9c0d7-c603-451a-b48d-952c91ee2832",
+                "id":"01e9c0d7-c603-451a-b48d-952c91ee2832",
+                "documentId":"imcp_crc_1866006437",
+                "type":"phvideo",
+                "link":{
+                    "type":"phvideo",
+                    "url":"01e9c0d7-c603-451a-b48d-952c91ee2832",
+                    "weburl":"http://share.iclient.ifeng.com/news/sharenews.f?guid=01e9c0d7-c603-451a-b48d-952c91ee2832"
+                },
+                "reftype":"editor",
+                "comments":"79",
+                "commentsall":"182",
+                "simId":"clusterId_2593747"
+            }
+			
+7.直播item
+
+体育直播
+ "styleType":"live"
+
+{
+                "thumbnail":"",
+                "online":"0",
+                "title":"哈登率队冲击七连胜 林书豪伤愈复出",
+                "id":"4463",
+                "documentId":"imcp_crc_2497653941",
+                "type":"sports_live",
+                "styleType":"live",
+                "startTimeStr":"今天 09:00",
+                "sportsLiveExt":{
+                    "matchid":"4463",
+                    "title":"篮网VS火箭",
+                    "isOneTitle":"0",
+                    "tag":"NBA常规赛",
+                    "typeName":"",
+                    "matchType":"basketball",
+                    "startTime":"1481590800",
+                    "endTime":"1481601600",
+                    "category":"1",
+                    "leftName":"篮网",
+                    "rightName":"火箭",
+                    "leftLogo":"http://y3.ifengimg.com/ifengimcp/pic/20140523/46b57f0735c51899fdf1_size5_w90_h62.png",
+                    "rightLogo":"http://y2.ifengimg.com/ifengimcp/pic/20140523/68b75c1f799ee171bb33_size7_w90_h62.png",
+                    "showScore":"1",
+                    "leftScore":"43",
+                    "rightScore":"53",
+                    "relateChannel1":"5641",
+                    "relateChannel2":"24549",
+                    "time":"",
+                    "section":"2",
+                    "sectionstr":"第二节",
+                    "sync":true
+                },
+                "liveExt":{
+                    "hasVideo":false,
+                    "hasVr":false,
+                    "status":"2",
+                    "startTime":"09:00"
+                },
+                "link":{
+                    "type":"sports_live",
+                    "url":"4463",
+                    "weburl":"http://share.iclient.ifeng.com/sports/newLivePage.h?vt=5&mt=4463"
+                },
+                "reftype":"editor"
+            }
+			
+新闻直播
+
+			{
+                "thumbnail":"http://d.ifengimg.com/w640_h228_q80/p2.ifengimg.com/cmpp/2016/12/12/65f86b37a927b475ba0f2ac275196422_size326_w640_h228.jpg",
+                "online":"0",
+                "title":"南京大屠杀国家公祭仪式",
+                "id":"102546",
+                "documentId":"imcp_crc_3222430899",
+                "type":"text_live",
+                "styleType":"live",
+                "showType":"1",
+                "liveExt":{
+                    "startStamp":"1481593500",
+                    "endStamp":"1481599800",
+                    "startTime":"2016-12-13 09:45:00",
+                    "status":"2",
+                    "hasVideo":true,
+                    "hasVr":false
+                },
+                "link":{
+                    "type":"text_live",
+                    "url":"102546",
+                    "weburl":"http://liveshare.iclient.ifeng.com/live_share?liveId=102546&vt=5"
+                },
+                "reftype":"editor"
+            }
+
+

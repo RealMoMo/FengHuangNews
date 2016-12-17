@@ -1,0 +1,119 @@
+﻿猜你喜欢
+
+
+down up返回数据类型一样的
+{
+    "listId":"irecommend",
+    "type":"irecommendlist",
+    "count":10,
+    "item":Array[10]
+}
+
+
+
+3个布局 
+
+单图
+
+{
+            "thumbnail":"http://d.ifengimg.com/w134_h96_q75/p3.ifengimg.com/yidian/2016_51/eea193889152abe_w960_h540.jpg",
+            "title":"英超第17轮裁判安排：阿特金森执法曼城阿森纳大战",
+            "source":"虎扑",
+            "recommendChannel":{
+                "name":"埃弗顿",
+                "type":"recommendChannel",
+                "url":"http://api.3g.ifeng.com/clientChannelNewsSearch?k=埃弗顿"
+            },
+            "updateTime":"2016/12/15 19:24:23",
+            "documentId":"imcp_116525463",
+            "type":"doc",
+            "style":{
+                "tag":"热"
+            },
+            "commentsUrl":"http://t.ifeng.com/appshare/7531019.shtml",
+            "comments":"0",
+            "commentsall":"0",
+            "link":{
+                "type":"doc",
+                "url":"http://api.iclient.ifeng.com/ipadtestdoc?aid=116525463"
+            }
+        }
+		
+多图
+
+{
+            "thumbnail":"http://d.ifengimg.com/w134_h96_q75/p1.ifengimg.com/ifengimcp/pic/20161215/bb3c4c26cfbe2e5c4395_size42_w600_h400.jpg",
+            "title":"这七个汽车安全冷知识 许多人不知道",
+            "source":"综合",
+            "recommendChannel":{
+                "name":"汽车",
+                "type":"recommendChannel",
+                "url":"http://api.3g.ifeng.com/clientChannelNewsSearch?k=汽车"
+            },
+            "updateTime":"2016/12/15 11:09:37",
+            "documentId":"imcp_116493421",
+            "type":"slide",
+            "style":{
+                "type":"slides",
+                "images":[
+                    "http://d.ifengimg.com/w254_h236_q75/p1.ifengimg.com/ifengimcp/pic/20161215/bb3c4c26cfbe2e5c4395_size42_w600_h400.jpg",
+                    "http://d.ifengimg.com/w164_h116_q75/p3.ifengimg.com/ifengimcp/pic/20161215/da3cf586bf299ba1f3da_size65_w600_h400.jpg",
+                    "http://d.ifengimg.com/w164_h116_q75/p3.ifengimg.com/ifengimcp/pic/20161215/e23f1941b94b50c06604_size90_w600_h399.jpg"
+                ],
+                "slideCount":7
+            },
+            "hasSlide":true,
+            "commentsUrl":"http://t.ifeng.com/appshare/7503999.shtml",
+            "comments":"1",
+            "commentsall":"4",
+            "link":{
+                "type":"slide",
+                "url":"http://api.iclient.ifeng.com/ipadtestdoc?aid=116493421"
+            }
+        }
+		
+		
+纯文字
+
+{
+            "thumbnail":"",
+            "title":"西甲球队扬威欧战 瓜帅批世界杯扩军",
+            "source":"手机人民网",
+            "recommendChannel":{
+                "name":"世界杯",
+                "type":"recommendChannel",
+                "url":"http://api.3g.ifeng.com/clientChannelNewsSearch?k=世界杯"
+            },
+            "updateTime":"2016/12/11 09:34:42",
+            "documentId":"imcp_116293973",
+            "type":"doc",
+            "commentsUrl":"http://t.ifeng.com/appshare/7328722.shtml",
+            "comments":"0",
+            "commentsall":"0",
+            "link":{
+                "type":"doc",
+                "url":"http://api.iclient.ifeng.com/ipadtestdoc?aid=116293973"
+            }
+        }
+		
+		
+加
+"style":{
+                "type":"slides",
+                "images":[
+                    "http://d.ifengimg.com/w254_h236_q75/p1.ifengimg.com/ifengimcp/pic/20161215/bb3c4c26cfbe2e5c4395_size42_w600_h400.jpg",
+                    "http://d.ifengimg.com/w164_h116_q75/p3.ifengimg.com/ifengimcp/pic/20161215/da3cf586bf299ba1f3da_size65_w600_h400.jpg",
+                    "http://d.ifengimg.com/w164_h116_q75/p3.ifengimg.com/ifengimcp/pic/20161215/e23f1941b94b50c06604_size90_w600_h399.jpg"
+                ],
+                "slideCount":7
+            }
+"hasSlide":true,
+
+
+
+
+		
+		
+		
+		
+		

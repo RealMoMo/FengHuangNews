@@ -1,0 +1,189 @@
+体育
+
+page=1
+依次是内容、轮播、体育项目
+
+[
+    {
+        "listId":"TY43",
+        "type":"list",
+        "expiredTime":180000,
+        "currentPage":1,
+        "totalPage":28,
+        "item":Array[20]
+    },
+    {
+        "listId":"FOCUSTY43",
+        "type":"focus",
+        "expiredTime":180000,
+        "currentPage":1,
+        "totalPage":1,
+        "item":Array[2]
+    },
+    {
+        "listId":"TYTOPIC",
+        "type":"tytopic",
+        "expiredTime":180000,
+        "currentPage":1,
+        "totalPage":1,
+        "item":Array[5]
+    }
+]
+
+page!=1
+
+[
+    {
+        "listId":"TY43",
+        "type":"list",
+        "expiredTime":180000,
+        "currentPage":2,
+        "totalPage":28,
+        "item":Array[20]
+    }
+]
+
+
+
+
+广告item
+{
+        "listId":"FOCUSTY43",
+        "type":"focus",
+        "expiredTime":180000,
+        "currentPage":1,
+        "totalPage":1,
+        "item":[
+            {
+                "thumbnail":"http://d.ifengimg.com/w576_h324_q80/p1.ifengimg.com/a/2016_51/41eb73abef8ca20_size64_w640_h360.jpg",
+                "online":"1",
+                "title":"曼联赢球后，她竟疯狂脱光衣服庆祝",
+                "showType":"0",
+                "updateTime":"2016/12/13 09:47:44",
+                "id":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030170050407616",
+                "documentId":"cmpp_030170050407616",
+                "type":"slide",
+                "style":{
+                    "type":"slides",
+                    "images":[
+                        "http://d.ifengimg.com/w164_h113_q80/p0.ifengimg.com/a/2016_51/0445902fbbb5c70_size26_w552_h411.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p0.ifengimg.com/a/2016_51/258602708ef808d_size20_w447_h313.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p3.ifengimg.com/a/2016_51/ba3042be4005251_size18_w535_h400.jpg"
+                    ],
+                    "slideCount":7
+                },
+                "hasSlide":true,
+                "commentsUrl":"http://sports.ifeng.com/a/20161213/50407616_0.shtml",
+                "comments":"68",
+                "commentsall":"340",
+                "link":{
+                    "type":"slide",
+                    "url":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030170050407616",
+                    "weburl":"http://share.iclient.ifeng.com/sharenews.f?aid=030170050407616"
+                },
+                "reftype":"editor"
+            }
+			
+专题item
+"item":[
+            {
+                "thumbnail":"http://d.ifengimg.com/w134_h96_q80/p2.ifengimg.com/a/2016/1213/ccd7ead15ccd001size53_w821_h542.jpg",
+                "online":"0",
+                "title":"哈登36+8+11林书豪复出失关键球 火箭险胜篮网斩7连胜",
+                "id":"http://api.iclient.ifeng.com/TopicApiForCmpp?topicid=29&json=y&ad=y",
+                "documentId":"imcp_crc_2142895040",
+                "type":"topic2",
+                "commentsUrl":"http://sports.ifeng.com/lanqiu/nba/",
+                "comments":"296",
+                "commentsall":"1332",
+                "styleType":"topic",
+                "link":{
+                    "type":"topic2",
+                    "url":"http://api.iclient.ifeng.com/TopicApiForCmpp?topicid=29&json=y&ad=y",
+                    "weburl":"http://api.iclient.ifeng.com/TopicApiForCmpp?topicid=29&ad=y"
+                },
+                "reftype":"editor"
+            
+
+单图item
+{
+                "thumbnail":"http://d.ifengimg.com/w134_h96_q80/p0.ifengimg.com/ifengiclient/ipic/20161213/default_333263_1f5506dec62f10014a7d8109539ae658_w448_h252.jpg",
+                "online":"1",
+                "title":"都是套路！孙继海炮轰高洪波+宣布退役竟都是这个目的",
+                "updateTime":"2016/12/13 08:13:33",
+                "id":"http://api.iclient.ifeng.com/api_vampire_article_detail?aid=sub_5086766",
+                "documentId":"sub_5086766",
+                "type":"doc",
+                "commentsUrl":"http://cdn.iclient.ifeng.com/res/article/49e/523/95a/5086766.html",
+                "comments":"38",
+                "commentsall":"119",
+                "link":{
+                    "type":"doc",
+                    "url":"http://api.iclient.ifeng.com/api_vampire_article_detail?aid=sub_5086766",
+                    "weburl":"http://share.iclient.ifeng.com/vampire/sharenews.f?&fromType=vampire&aid=sub_5086766"
+                },
+                "reftype":"editor"
+            }
+			
+			
+多图item
+{
+                "thumbnail":"http://d.ifengimg.com/w134_h96_q80/p2.ifengimg.com/a/2016_51/2cfe8f44b594a52_size47_w918_h663.jpg",
+                "online":"1",
+                "title":"最性感库里球迷热辣美照 丁字裤抢眼",
+                "showType":"0",
+                "updateTime":"2016/12/13 08:28:59",
+                "id":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030170050407769",
+                "documentId":"cmpp_030170050407769",
+                "type":"slide",
+                "style":{
+                    "type":"slides",
+                    "images":[
+                        "http://d.ifengimg.com/w164_h113_q80/p2.ifengimg.com/a/2016_51/96def5a292b3168_size47_w918_h663.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p1.ifengimg.com/a/2016_51/b4a5587d8d06501_size65_w929_h632.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p2.ifengimg.com/a/2016_51/6bc32dd2f41f80f_size85_w866_h806.jpg"
+                    ],
+                    "slideCount":6
+                },
+                "hasSlide":true,
+                "commentsUrl":"http://sports.ifeng.com/a/20161213/50407769_0.shtml",
+                "comments":"17",
+                "commentsall":"85",
+                "link":{
+                    "type":"slide",
+                    "url":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030170050407769",
+                    "weburl":"http://share.iclient.ifeng.com/sharenews.f?aid=030170050407769"
+                },
+                "reftype":"editor"
+            }
+			
+			
+带来源的item
+{
+                "thumbnail":"http://d.ifengimg.com/w134_h96_q80/p2.ifengimg.com/ifengimcp/pic/20161213/d1a8ec20e7d848b8f3e4_size16_w336_h240.jpg",
+                "online":"1",
+                "title":"出线稳如狗，年年打宇宙，枪手欧冠抽签这集我看N遍了",
+                "source":"撩球帝",
+                "subscribe":{
+                    "cateid":"",
+                    "type":"source",
+                    "catename":"撩球帝",
+                    "logo":null,
+                    "description":""
+                },
+                "updateTime":"2016/12/13 11:31:49",
+                "id":"http://api.iclient.ifeng.com/api_vampire_article_detail?aid=sub_5095765",
+                "documentId":"sub_5095765",
+                "type":"doc",
+                "commentsUrl":"http://cdn.iclient.ifeng.com/res/article/cda/dc6/0c5/5095765.html",
+                "comments":"1",
+                "commentsall":"8",
+                "link":{
+                    "type":"doc",
+                    "url":"http://api.iclient.ifeng.com/api_vampire_article_detail?aid=sub_5095765",
+                    "weburl":"http://share.iclient.ifeng.com/vampire/sharenews.f?&fromType=vampire&aid=sub_5095765"
+                },
+                "reftype":"editor"
+            }
+			
+			

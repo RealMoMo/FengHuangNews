@@ -1,0 +1,60 @@
+广告、单图、多图 
+
+ "listId":"SYLB10NEW_DOWN",
+        "type":"list",
+        "expiredTime":180000,
+        "currentPage":1,
+        "totalPage":1,
+"item":[]
+ {
+                "thumbnail": "http://d.ifengimg.com/w134_h96_q80/p3.ifengimg.com/fck/2016_51/57a86c65af11359_w600_h317.jpg", 
+                "online": "1", 
+                "title": "央媒挨户走访核对：台风“达维”致死数疑瞒报30人", 
+                "showType": "0", 
+                "source": "央广新闻", 
+                "subscribe": {
+                    "cateid": "", 
+                    "type": "source", 
+                    "catename": "央广新闻", 
+                    "logo": null, 
+                    "description": ""
+                }, 
+                "updateTime": "2016/12/12 11:39:04", 
+                "id": "http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030000050402664", 
+                "documentId": "cmpp_030000050402664", 
+                "type": "doc", 
+                "style": {
+                    "type": "slides", 
+                    "images": [
+                        "http://d.ifengimg.com/w164_h113_q80/p3.ifengimg.com/fck/2016_51/c42039ec2cf02bf_w600_h357.jpg", 
+                        "http://d.ifengimg.com/w164_h113_q80/p3.ifengimg.com/fck/2016_51/f029d4fb853569e_w600_h367.jpg", 
+                        "http://d.ifengimg.com/w164_h113_q80/p3.ifengimg.com/fck/2016_51/91630cbb0b6251a_w600_h398.jpg", 
+                        "http://d.ifengimg.com/w164_h113_q80/p3.ifengimg.com/fck/2016_51/47d4d084c3bf5cb_w600_h490.jpg", 
+                        "http://d.ifengimg.com/w164_h113_q80/p3.ifengimg.com/fck/2016_51/ba4d1b198cb0c62_w600_h473.jpg"
+                    ], 
+                    "slideCount": 14
+                }, 
+				"phvideo":{
+                    "channelName":"我勒个去",
+                    "length":69
+                },
+                "hasSlide": true, 
+                "commentsUrl": "http://t.ifeng.com/appshare/7365470.shtml", 
+                "comments": "0", 
+                "commentsall": "0", 
+                "link": {
+                    "type": "doc", 
+                    "url": "http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030000050402664", 
+                    "weburl": "http://share.iclient.ifeng.com/sharenews.f?aid=cmpp_030000050402664"
+                }, 
+                "simId": "clusterId_3816687", 
+                "reftype": "remcommend"
+            }
+			
+----			
+			加专题的item的内容
+				"styleType":"topic",
+				
+				
+				
+				

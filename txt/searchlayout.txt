@@ -1,0 +1,48 @@
+{
+            "thumbnail":"",
+            "online":"1",
+            "title":"“欧冠十六郎”，止步十六强？",
+            "showType":"0",
+            "source":"信息时报",
+            "subscribe":{
+                "cateid":"",
+                "type":"source",
+                "catename":"信息时报",
+                "logo":"",
+                "description":""
+            },
+            "updateTime":"2016/12/13 17:22:13",
+            "id":"http://api.iclient.ifeng.com/ipadtestdoc?aid=imcp_116378149",
+            "documentId":"imcp_116378149",
+            "type":"doc",
+            "commentsUrl":"http://t.ifeng.com/appshare/7425405.shtml",
+            "comments":"0",
+            "commentsall":"0",
+            "link":{
+                "type":"doc",
+                "url":"http://api.iclient.ifeng.com/ipadtestdoc?aid=imcp_116378149",
+                "weburl":"http://share.iclient.ifeng.com/sharenews.f?aid=116378149"
+            }
+			
+			
+			
+searchcontent
+
+1.单图  -------0
+
+图片  标题 来源 时间
+
+
+2.多图	-------1
+
+3张图片  标题 来源 时间
+
+3.视频   ------3
+
+图片 播放按钮图片  时长 标题 来源
+
+4.纯文字  -----2
+
+标题  来源 时间
+
+

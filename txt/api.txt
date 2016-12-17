@@ -1,0 +1,244 @@
+﻿新闻
+
+头条api:
+
+可以不需要timestamp，只需action
+
+http://api.iclient.ifeng.com/ClientNews?id=SYLB10,SYDT10,SYRECOMMEND&action=down&gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi
+
+下拉刷新			api固定 不会变	
+id					SYLB10,SYDT10,SYRECOMMEND
+action				down                           -----重要
+gv					5.4.0
+av					5.4.0
+uid					8.665E+14
+deviceid			8.665E+14
+proid				ifengnews
+os					android_23
+df					androidphone
+vt					5
+screen				1080x1920
+publishid			6001
+nw					wifi
+
+
+http://api.iclient.ifeng.com/ClientNews?id=SYLB10,SYDT10,SYRECOMMEND&action=up&timestamp=2016%2F12%2F10+05%3A30%3A49&gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi
+
+上拉加载更多
+
+				只变timestamp参数
+id				SYLB10,SYDT10,SYRECOMMEND
+action			up								----重要
+timestamp		2016-12-10 5:30					----重要
+gv				5.4.0
+av				5.4.0
+uid				8.665E+14
+deviceid		8.665E+14
+proid			ifengnews
+os				android_23
+df				androidphone
+vt				5
+screen			1080x1920
+publishid		6001
+nw				wifi
+
+
+				初次进入	
+id				SYLB10,SYDT10,SYRECOMMEND
+action			default
+gv				5.4.0
+av				5.4.0
+uid				8.665E+14
+deviceid		8.665E+14
+proid			ifengnews
+os				android_23
+df				androidphone
+vt				5
+screen			1080x1920
+publishid		6001
+nw				wifi
+
+-------------------------------
+
+
+体育
+http://api.iclient.ifeng.com/ClientNews?id=TY43,FOCUSTY43,TYLIVE,TYTOPIC&page=1&gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi
+
+下拉刷新没用	
+加载更多page++
+	
+id		TY43,FOCUSTY43,TYLIVE,TYTOPIC
+page		1
+gv		5.4.0
+av		5.4.0
+uid		8.665E+14
+deviceid	8.665E+14
+proid		ifengnews
+os		android_23
+df		androidphone
+vt		5
+screen		1080x1920
+publishid	6001
+nw		wifi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------
+
+直播api
+
+http://api.iclient.ifeng.com/ClientNews?id=ZBPD,ZBPDNS&page=1&gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi
+
+下拉刷新没什么卵用，上拉加载更多只有page++	
+id				ZBPD,ZBPDNS
+page			1
+gv				5.4.0
+av				5.4.0
+uid				8.665E+14
+deviceid		8.665E+14
+proid			ifengnews
+os				android_23
+df				androidphone
+vt				5
+screen			1080x1920
+publishid		6001
+nw				wifi
+
+
+直播顶部的电视台api
+
+http://api.iclient.ifeng.com/livechannel_logoinfo?gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi
+
+
+
+
+----------------------------------------
+
+视频接口
+
+精选
+page=1 page++
+http://api.iclient.ifeng.com/ifengvideoList?page=1&gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi
+
+
+其他视频接口
+最主要多了一个参数：typeid  --->这个从精选接口返回的
+
+所以，视频模块的ViewPager所放的fragment至多2多即可 精选与其他
+
+体育
+
+page=1 page++
+http://api.iclient.ifeng.com/ifengvideoList?page=1&listtype=list&typeid=clientvideo_10&gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi
+
+
+
+娱乐
+
+http://api.iclient.ifeng.com/ifengvideoList?page=1&listtype=list&typeid=clientvideo_9&gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi
+
+
+搜索api:
+
+
+http://api.3g.ifeng.com/client_search_hotword?gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi
+
+
+搜索具体内容的api
+
+http://api.3g.ifeng.com/client_search_list?k=朴槿惠&page=1&gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi
+
+
+k---搜索内容   page=1 page++
+
+k			朴槿惠
+page		1
+gv			5.4.0
+av			5.4.0
+uid			866500027180423
+deviceid	866500027180423
+proid		ifengnews
+os			android_23
+df			androidphone
+vt			5
+screen		1080x1920
+publishid	6001
+nw			wifi
+
+
+
+搜索带凤凰号内容的api
+
+
+cid可从搜索api得到
+
+cid			7518
+page		1
+gv			5.4.0
+av			5.4.0
+uid			866500027180423
+deviceid	866500027180423
+proid		ifengnews
+os			android_23
+df			androidphone
+vt			5
+screen		1080x1920
+publishid	6001
+nw			wifi
+
+
+----------------------------------------------------
+
+我的订阅
+
+page=1 page++
+
+http://api.3g.ifeng.com/api_vampire_categroy_recommend?parentid=0&page=1&pagesize=20
+
+
+猜你喜欢
+action=down or up
+
+下拉刷新
+http://api.irecommend.ifeng.com/read.php?gv=5.4.0&av=5.4.0&uid=866500027180423&deviceid=866500027180423&proid=ifengnews&os=android_23&df=androidphone&vt=5&screen=1080x1920&publishid=6001&nw=wifi&action=down
+
+gv			5.4.0
+av			5.4.0
+uid			866500027180423
+deviceid	866500027180423
+proid		ifengnews
+os			android_23
+df			androidphone
+vt			5
+screen		1080x1920
+publishid	6001
+nw			wifi
+action		down
+
+
+上拉加载更多
+
+gv			5.4.0
+av			5.4.0
+uid			866500027180423
+deviceid	866500027180423
+proid		ifengnews
+os			android_23
+df			androidphone
+vt			5
+screen		1080x1920
+publishid	6001
+nw			wifi
+action		up

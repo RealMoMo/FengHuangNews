@@ -1,0 +1,62 @@
+多图、单图、专题、
+
+{
+                "thumbnail":"http://d.ifengimg.com/w134_h96_q80/p2.ifengimg.com/a/2016_51/2cfe8f44b594a52_size47_w918_h663.jpg",
+                "online":"1",
+                "title":"最性感库里球迷热辣美照 丁字裤抢眼",
+                "showType":"0",
+                "updateTime":"2016/12/13 08:28:59",
+                "id":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030170050407769",
+                "documentId":"cmpp_030170050407769",
+                "type":"slide",
+				"styleType":"topic",
+				"source":"撩球帝",
+                "subscribe":{
+                    "cateid":"",
+                    "type":"source",
+                    "catename":"撩球帝",
+                    "logo":null,
+                    "description":""
+                },
+                "style":{
+                    "type":"slides",
+                    "images":[
+                        "http://d.ifengimg.com/w164_h113_q80/p2.ifengimg.com/a/2016_51/96def5a292b3168_size47_w918_h663.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p1.ifengimg.com/a/2016_51/b4a5587d8d06501_size65_w929_h632.jpg",
+                        "http://d.ifengimg.com/w164_h113_q80/p2.ifengimg.com/a/2016_51/6bc32dd2f41f80f_size85_w866_h806.jpg"
+                    ],
+                    "slideCount":6
+                },
+                "hasSlide":true,
+                "commentsUrl":"http://sports.ifeng.com/a/20161213/50407769_0.shtml",
+                "comments":"17",
+                "commentsall":"85",
+                "link":{
+                    "type":"slide",
+                    "url":"http://api.iclient.ifeng.com/ipadtestdoc?aid=cmpp_030170050407769",
+                    "weburl":"http://share.iclient.ifeng.com/sharenews.f?aid=030170050407769"
+                },
+                "reftype":"editor"
+            }
+			
+	-----------------------------------------		
+			
+			多图内容与广告一样，包含单图
+			专题加"styleType":"topic",
+			带来源item加：
+			"source":"撩球帝",
+                "subscribe":{
+                    "cateid":"",
+                    "type":"source",
+                    "catename":"撩球帝",
+                    "logo":null,
+                    "description":""
+                },
+				
+	------------------------------------------
+	体育项目："type":"tytopic",
+	专题：有"styleType":"topic"，其他没有 判断其他为null即可
+	来源item:有source  ---单图模式，没必要搞太复杂  哈哈····
+	广告："type":"focus",
+	多图：根据"style"
+	单图：最后

@@ -1,0 +1,21 @@
+﻿
+单图：
+thumbnail ---图片
+title ---标题
+recommendChannel ---name  --分类
+"commentsall" ---评论数
+
+多图
+title ---标题
+recommendChannel ---name  --分类
+"commentsall" ---评论数
+style--images---图片
+
+纯文字：
+title--标题
+recommendChannel ---name  --分类
+"commentsall"---评论数
+
+
+
+实现点击事件，需要自己解析数据。因为路劲都不能访问

@@ -1,0 +1,33 @@
+
+
+videoitem
+
+{
+                "praise":"5",
+                "tread":"5",
+                "playTime":"17",
+                "documentId":"video_0139852b-d6f9-4ac6-b671-454d10020b50",
+                "title":"普京见日媒前逗了逗安倍送他的狗 日方人员表情大亮",
+                "image":"http://d.ifengimg.com/w640_h360_q80/p1.ifengimg.com/a/2016_51/0d9882784e53c23.jpg",
+                "thumbnail":"http://d.ifengimg.com/w132_h94_q80/p1.ifengimg.com/a/2016_51/0d9882784e53c23.jpg",
+                "guid":"0139852b-d6f9-4ac6-b671-454d10020b50",
+                "commentsall":204,
+                "duration":76,
+                "shareUrl":"http://share.iclient.ifeng.com/sharenews.f?guid=0139852b-d6f9-4ac6-b671-454d10020b50",
+                "commentsUrl":"http://share.iclient.ifeng.com/sharenews.f?guid=0139852b-d6f9-4ac6-b671-454d10020b50",
+                "video_url":"https://ips.ifeng.com/video19.ifeng.com/video09/2016/12/14/4413998-102-008-1010.mp4",
+                "video_size":5124
+            }
+			
+			
+			
+praise---点赞次数
+tread---点不赞次数
+playTime---播放次数   上万实现1.1万
+title
+image---图片
+thumbnail--缩略图
+duration--视频时长
+video_url---视频
+commentsall--评论数
+shareUrl---weburl可展示
