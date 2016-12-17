@@ -88,6 +88,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".wxapi.WXEntryActivity"/>
+
     </application>
 
 </manifest>

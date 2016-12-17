@@ -61,9 +61,9 @@ public class SportNewsChannelIconView extends LinearLayout {
                 @Override
                 public void onClick(View v) {
                     //url返回是json数据，要自己再自定义布局
-                    String url = itemEntity.getId();
+//                    String url = itemEntity.getId();
                     //webUrl 点击没有显示网页
-                    String webUrl = itemEntity.getLink().getWeburl();
+//                    String webUrl = itemEntity.getLink().getWeburl();
 
                 }
             });

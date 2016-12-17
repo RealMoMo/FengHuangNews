@@ -218,9 +218,9 @@ public class ReadFragment extends Fragment implements AbsListView.OnScrollListen
                 }
 
                 tempList.addAll(itemEntities);
-                if (action == ACTION_UP) {
+                if (action.equals(ACTION_UP)) {
                     totalList.addAll(tempList);
-                } else if (action == ACTION_DOWN) {
+                } else if (action.equals(ACTION_DOWN)) {
                     tempList.addAll(totalList);
                     totalList.clear();
                     totalList.addAll(tempList);
