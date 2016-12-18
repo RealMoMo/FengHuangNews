@@ -1,4 +1,4 @@
-##kanfang_demo
+##FengHuangNew
 
 仿凤凰新闻app---第十周学习Android路上
 最重要的事情放前面说，请用wifi测试,最好也下载凤凰新闻app对比。
