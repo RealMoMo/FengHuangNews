@@ -17,19 +17,19 @@ RealMoMo
 ###预览界面
 
 
-  <br>新闻界面</br>
-<br> ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic1.png)</br>
+<br>新闻界面</br>
+	<br> ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic1.png)</br>
 
-  <br> 直播界面</br>
+<br> 直播界面</br>
  <br> ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic2.png)</br>
 
-    <br> 搜索界面</br>
+<br> 搜索界面</br>
   <br> ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic3.png)</br>
 
-      <br> 视频界面</br>
+<br> 视频界面</br>
   <br>  ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic4.png)</br>
 
-       <br>  发现界面</br>
+<br>  发现界面</br>
    <br>  ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic5.png)</br>
 
      
