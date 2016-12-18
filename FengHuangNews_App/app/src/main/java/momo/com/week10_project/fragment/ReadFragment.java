@@ -103,7 +103,7 @@ public class ReadFragment extends Fragment implements AbsListView.OnScrollListen
                         Glide.with(getActivity()).load(images.get(2)).into(iv3);
                         //分类
                         TextView tv_recommendChannel = (TextView) holder.findViewById(R.id.read_lv2_recommendChannel);
-                        tv_recommendChannel.setText(itemEntity.getRecommendChannel().getName());
+                        tv_recommendChannel.setText(itemEntity.getRecommendChannel()==null?"":itemEntity.getRecommendChannel().getName());
                         //评论数
                         TextView tv_comments = (TextView) holder.findViewById(R.id.read_lv2_comments);
                         tv_comments.setText(itemEntity.getCommentsall());
