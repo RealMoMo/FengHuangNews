@@ -1,7 +1,7 @@
 ##kanfang_demo
 
 仿凤凰新闻app---第十周学习Android路上
-最重要的事情放前面说，请用wifi测试,最好下载凤凰新闻app对比。
+最重要的事情放前面说，请用wifi测试,最好也下载凤凰新闻app对比。
 
 ---
 关于作者：
@@ -17,22 +17,21 @@ RealMoMo
 ###预览界面
 
 
- <br>动态图较大，就不动态演示</br>
- 
+  <br>新闻界面</br>
 <br> ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic1.png)</br>
- <br>新闻界面</br>
- 
+
+  <br> 直播界面</br>
  <br> ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic2.png)</br>
- <br> 直播界面</br>
-  
+
+    <br> 搜索界面</br>
   <br> ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic3.png)</br>
-  <br> 搜索界面</br>
-   
+
+      <br> 视频界面</br>
   <br>  ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic4.png)</br>
-   <br> 视频界面</br>
-    
+
+       <br>  发现界面</br>
    <br>  ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic5.png)</br>
-   <br>  发现界面</br>
+
      
    
 
@@ -43,7 +42,7 @@ Android Studio2.0
 ### 下载安装
 导入项目，重新配置适合你开发环境build.gradle文件
 导入里面app模块，重新配置适合你开发环境build.gradle文件
-注意：java-->momo包下才是主要代码，其他事第三方登录导进来的包。
+注意：java-->momo包下才是主要代码，其他是第三方登录导进来的包。
 
 ```java  
   
@@ -114,7 +113,7 @@ Everyone who has contributed code and reported issues and pull requests!
  * 11.该app没怎么考虑性能优化问题。
  * 12.widget包下的iconview nameview共4个自定义，我渣应该用一个抽象类直接弄好就行。   （懒···心塞···）
  * 13.视频播放界面不太友好。
- * 14.若直接用android studio安装apk,weibo不能第三方。要自己改assets文件夹的ShareSDK的配置
+ * 14.若直接用android studio安装apk,weibo不能第三方实现不了登录。要自己改assets文件夹的ShareSDK的配置
 
 ###Version
 <br>1.0实现大致功能----2016.12.16</br>
