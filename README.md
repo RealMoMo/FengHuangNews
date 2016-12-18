@@ -16,6 +16,8 @@ RealMoMo
 
 ###预览界面
 
+<br>不动态就不放了，有需要可以直接下载MyApk安装运行。</br>
+
 
 <br>新闻界面</br>
 	<br> ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic1.png)</br>
