@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/news_lv2_height"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/news_lv2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/news_lv_padding"
+        android:paddingRight="@dimen/news_lv_padding"
+        android:paddingTop="@dimen/news_lv_padding"
+        android:textColor="@color/news_lv_titleColor"
+        android:textSize="@dimen/news_lv_titlesize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="@dimen/news_lv2_imglayoutpadding">
+
+        <ImageView
+            android:id="@+id/news_lv2_iv1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/news_lv2_imgpadding"
+            android:paddingLeft="@dimen/news_lv2_imgpadding" />
+
+        <ImageView
+            android:id="@+id/news_lv2_iv2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/news_lv2_imgpadding"
+            android:paddingLeft="@dimen/news_lv2_imgpadding" />
+
+        <ImageView
+            android:id="@+id/news_lv2_iv3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/news_lv2_imgpadding"
+            android:paddingLeft="@dimen/news_lv2_imgpadding" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:paddingLeft="@dimen/news_lv_padding"
+        android:id="@+id/news_lv2_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/news_lv_sourceColor"
+        android:textSize="@dimen/news_lv_sourcesize" />
+
+</LinearLayout>
