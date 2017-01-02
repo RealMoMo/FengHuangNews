@@ -1,50 +1,50 @@
 ##FengHuangNew
 
-�·������app---��ʮ��ѧϰAndroid·��
-����Ҫ�������ǰ��˵������wifi����,���Ҳ���ط������app�Աȡ�
-
+仿凤凰新闻app---第十周学习Android路上
+最重要的事情放前面说，请用wifi测试,最好也下载凤凰新闻app对比。
+若运行app报空指针，可能接口返回的接口数据结构有所变化。
 ---
-�������ߣ�
+关于作者：
 RealMoMo
-> �����ң���ӭ��ע  
-   ΢�ţ�[Real_Mo]()  
-   ���䣺czb166@qq.com
+> 关于我，欢迎关注  
+   微信：[Real_Mo]()  
+   邮箱：czb166@qq.com
 -------------
-####����Ŀ��: 
-<br>1.����</br>
-<br>2.��Ϥץ��</br>
+####开发目的: 
+<br>1.练手</br>
+<br>2.熟悉抓包</br>
 
-###Ԥ������
+###预览界面
 
-<br>����̬�Ͳ����ˣ�����Ҫ����ֱ������MyApk��װ���С�</br>
+<br>不动态就不放了，有需要可以直接下载MyApk安装运行。</br>
 
 
-<br>���Ž���</br>
+<br>新闻界面</br>
 	<br> ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic1.png)</br>
 
-<br> ֱ������</br>
+<br> 直播界面</br>
  <br> ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic2.png)</br>
 
-<br> ��������</br>
+<br> 搜索界面</br>
   <br> ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic3.png)</br>
 
-<br> ��Ƶ����</br>
+<br> 视频界面</br>
   <br>  ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic4.png)</br>
 
-<br>  ���ֽ���</br>
+<br>  发现界面</br>
    <br>  ![image](https://github.com/RealMoMo/FengHuangNews/blob/master/pic/pic5.png)</br>
 
      
    
 
-###��������
+###开发环境
 Android Studio2.0
 
 
-### ���ذ�װ
-������Ŀ�����������ʺ��㿪������build.gradle�ļ�
-��������appģ�飬���������ʺ��㿪������build.gradle�ļ�
-ע�⣺java-->momo���²�����Ҫ���룬�����ǵ�������¼�������İ���
+### 下载安装
+导入项目，重新配置适合你开发环境build.gradle文件
+导入里面app模块，重新配置适合你开发环境build.gradle文件
+注意：java-->momo包下才是主要代码，其他是第三方登录导进来的包。
 
 ```java  
   
@@ -102,21 +102,21 @@ Everyone who has contributed code and reported issues and pull requests!
 
 
 ###TODO
- * 1.��appû�������湦�ܡ�
- * 2.����listview���item��û��д����չʾ���ݣ�������webviewչʾ�ġ�
- * 3.ֱ�����ݵ���Ƶ�ӿڣ�û��ץ��������������ṩ�¡�
- * 4.���Ž���ֻд������ģ��--ͷ��������������ģ��˼·����һ�¡������Ϳ����� ^_^��
- * 5.��Ƶû��ʵ�ֵ����ȥ���ŵĹ��ܡ�����listview������Ƶ�����Ƶ����ȥ���Ŷ���С�¡�
- * 6.����ģ���û��ʵ��listview item������ܣ��ӿڷ��ص����ݣ���������WebViewչʾ����Ҫ�Լ��������ݣ�д���ֽ���չʾ��
- * 7.�ҵ�ģ��ֻд��mob�������ĵ�¼��
- * 8.��ģ���listview����û��дʲô˫��ͷ���ص������Ĺ��ܡ�������д
- * 9.����ģ������item Ĭ������RealMo��item,ʵ�ֹ��ܵ����Ӷ��ѡ�
- * 10.webview���ض���ķ�������û����д������ת�Լ��ֻ���������Լ���д�÷������ɡ�
- * 11.��appû��ô���������Ż����⡣
- * 12.widget���µ�iconview nameview��4���Զ��壬����Ӧ����һ��������ֱ��Ū�þ��С�   ����������������������
- * 13.��Ƶ���Ž��治̫�Ѻá�
- * 14.��ֱ����android studio��װapk,weibo���ܵ�����ʵ�ֲ��˵�¼��Ҫ�Լ���assets�ļ��е�ShareSDK������
+ * 1.本app没有做缓存功能。
+ * 2.所有listview点击item，没有写布局展示内容，都是用webview展示的。
+ * 3.直播内容的视频接口，没有抓到。求好心人能提供下。
+ * 4.新闻界面只写了两个模块--头条和体育。其他模块思路都是一致。（懂就可以了 ^_^）
+ * 5.视频没有实现点击进去播放的功能。懂在listview播放视频，估计点击进去播放都是小事。
+ * 6.发现模块的没有实现listview item点击功能，接口返回的数据，都不能用WebView展示。需要自己解析内容，写布局进行展示。
+ * 7.我的模块只写用mob第三方的登录。
+ * 8.各模块的listview，都没有写什么双击头部回到顶部的功能。（懒得写
+ * 9.新闻模块添加item 默认添加RealMo的item,实现功能的样子而已。
+ * 10.webview的重定向的方法，我没有重写。若跳转自己手机浏览器，自己重写该方法即可。
+ * 11.该app没怎么考虑性能优化问题。
+ * 12.widget包下的iconview nameview共4个自定义，我渣应该用一个抽象类直接弄好就行。   （懒···心塞···）
+ * 13.视频播放界面不太友好。
+ * 14.若直接用android studio安装apk,weibo不能第三方实现不了登录。要自己改assets文件夹的ShareSDK的配置
 
 ###Version
-<br>1.0ʵ�ִ��¹���----2016.12.16</br>
-<br>1.1����ע�͡��������----2016.12.17</br>
+<br>1.0实现大致功能----2016.12.16</br>
+<br>1.1完善注释、精简代码----2016.12.17</br>
