@@ -119,3 +119,4 @@ Everyone who has contributed code and reported issues and pull requests!
 ###Version
 <br>1.0实现大致功能----2016.12.16</br>
 <br>1.1完善注释、精简代码----2016.12.17</br>
+<br>1.2修复新闻界面的bug----201701..07</br>
