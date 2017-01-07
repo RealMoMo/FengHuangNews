@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/read_lv_normal_height"
+    android:padding="@dimen/read_lv_padding"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:textSize="@dimen/read_lv_titlesize"
+        android:textColor="@color/read_lv_titleColor"
+        android:text="1111"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/read_lv3_title"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+
+
+    <LinearLayout
+        android:paddingLeft="@dimen/read_lv_padding"
+        android:paddingRight="@dimen/read_lv_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:textSize="@dimen/read_lv_sourcesize"
+            android:textColor="@color/read_lv_sourceColor"
+            android:id="@+id/read_lv3_recommendChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/read_lv3_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/comment"
+            android:gravity="center"
+            android:textColor="@color/read_lv_sourceColor"
+            android:textSize="@dimen/read_lv_sourcesize" />
+
+    </LinearLayout>
+
+</LinearLayout>
